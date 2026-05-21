@@ -1,123 +1,124 @@
-# XSP Licensing — Arquitetura Anti-Pirataria
+# XSP Licensing — Servidor Central
 
-Sistema completo de licenciamento SaaS para o **Painel Office Xtream Server Pro**.
+Sistema de licenciamento anti-pirataria para o painel IPTV XSP.  
+Distribui o painel como imagem Docker cifrada, com validação online por HWID + IP.
 
-## Tudo em Docker
+## Instalação na VPS (1 comando)
 
-A única dependência no host é o **Docker**. Tudo o mais — API Go, Postgres,
-Redis, registry, admin, Caddy (TLS), até o pipeline de build da release —
-roda em containers.
-
-```
-licensing/
-├── docker-compose.yml      Stack completo (caddy + api + admin + db + redis + registry + builder)
-├── Caddyfile               Proxy reverso + TLS automático
-├── Makefile                Atalhos (make up, make release, make logs)
-├── bootstrap-secrets.sh    Gera todos os segredos via container Go
-├── .env.example
-│
-├── install-server.sh       1-comando para subir tudo numa VPS limpa
-├── install-painel.sh       1-comando para o cliente instalar o painel
-├── INSTALL.sh              Router (pergunta server ou painel)
-│
-├── api-license/            API central (Go) — Dockerfile próprio
-├── xsp-loader/             Extensão C que decifra PHP em memória
-├── painel-image/           Pipeline: adapta → ofusca → cifra → push registry
-├── admin-dashboard/        Painel PHP para gerenciar KEYs
-├── builder/                Imagem com Python+Docker CLI para rodar releases
-├── landing/                Página pública /install.sh com domínio auto-detect
-└── docs/                   DEPLOY.md, OPERATIONS.md, SECURITY.md
-```
-
-## Modelo de proteção (em uma frase)
-
-> Os `.php` do painel viajam **cifrados em disco (AES-256-GCM)** dentro de um
-> container Docker. A chave para decifrar **não fica na imagem** — é
-> entregue pela API central a cada boot, **cifrada com o HWID da máquina do
-> cliente**. Sem licença ativa, sem chave. Sem chave, sem decifrar. Sem
-> decifrar, painel não roda.
-
-## Ordem de leitura recomendada
-
-1. [`docs/DEPLOY.md`](docs/DEPLOY.md) — Como subir a infra do zero numa VPS.
-2. [`docs/OPERATIONS.md`](docs/OPERATIONS.md) — Runbook diário (criar KEY, revogar, etc.).
-3. [`docs/SECURITY.md`](docs/SECURITY.md) — Camadas de proteção e limitações honestas.
-4. `api-license/README.md` — API e endpoints.
-5. `installer-go/README.md` — Instalador do cliente.
-6. `xsp-loader/README.md` — Extensão C.
-7. `painel-image/README.md` — Pipeline de release.
-8. `admin-dashboard/README.md` — Painel admin.
-
-## Quick start — 1 comando
-
-### Você (uma vez, na sua VPS central)
+Execute como **root** na VPS que vai rodar o servidor central:
 
 ```bash
-# Após apontar os 4 subdomínios para a VPS:
-cd licensing/
-sudo bash install-server.sh
+docker run --rm -it \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /root:/root \
+  -w /root \
+  ghcr.io/flaviokalleu/xsp-licensing:latest
 ```
 
-Pronto. O script:
-- Instala Docker (única dependência no host)
-- Coleta seus 4 domínios + e-mail
-- Gera todos os segredos via container Go
-- Sobe o stack completo via `docker compose up`:
-  - Caddy (TLS automático Let's Encrypt)
-  - api-license (Go)
-  - admin-dashboard (PHP)
-  - Postgres + Redis + Registry
-- Hospeda landing pública + `install.sh` personalizado
+O instalador vai perguntar interativamente:
 
-### Cliente (cada VPS nova que vender)
+| Pergunta | Descrição |
+|---|---|
+| Modo de acesso | `S` = subdomínios separados + TLS (recomendado produção) |
+| | `U` = domínio único com paths `/api`, `/admin` |
+| | `I` = só IP, sem TLS (testes locais) |
+| Domínios | Configurados conforme o modo escolhido |
+| E-mail Let's Encrypt | Para emissão automática de certificados TLS |
+| Usuário admin | Login do painel administrativo |
+
+Ao final, a senha do admin é exibida **uma única vez** — anote.
+
+## O que sobe
+
+| Container | Função |
+|---|---|
+| `api` | API central em Go (licenças, heartbeat, fraude) |
+| `admin` | Painel admin PHP (CRUD de keys) |
+| `portal` | Portal self-service do cliente |
+| `caddy` | Reverse proxy + TLS automático (Let's Encrypt) |
+| `postgres` | Banco de dados central |
+| `redis` | Cache de nonces e heartbeats |
+| `registry` | Registry Docker privado para imagens do painel |
+
+## Pré-requisitos
+
+- VPS Linux (Ubuntu 22.04+ recomendado)
+- Docker 24+ instalado
+- Portas abertas: `80`, `443`, `5000` (registry)
+- DNS apontado para o IP da VPS (modo S ou U)
+
+### Instalar Docker na VPS
 
 ```bash
-curl -sSL https://seudominio.com/install.sh | sudo bash
+curl -fsSL https://get.docker.com | sh
 ```
 
-Não precisa editar nada — o `install-server.sh` já substituiu os segredos
-no `install.sh` antes de hospedar.
+## Comandos pós-instalação
 
-### Empacotar release nova do painel
+Execute em `/root` após instalar:
 
 ```bash
-# No diretório licensing/
-make release
+docker compose ps          # estado dos containers
+docker compose logs -f     # logs em tempo real
+docker compose logs -f api # logs de um serviço específico
+docker compose restart     # reinicia tudo
+make release               # publica nova versão do painel
+make release-loader        # recompila extensão C (xsp_loader.so)
 ```
 
-Esse `make release` chama o container `builder` que executa todo o pipeline:
-adapta credenciais → ofusca → cifra → builda imagem Docker → push para o
-registry → registra a master key na API. Sem precisar de Python ou
-ferramentas no host.
+## Próximos passos após instalar
 
-### Atalhos do Makefile
+1. Acesse `https://SEU_DOMINIO_ADMIN` com o usuário e senha gerados
+2. Crie uma **KEY** para o cliente
+3. Envie ao cliente o comando de instalação:
+   ```bash
+   curl -fsSL https://SEU_DOMINIO/install.sh | sudo bash -s -- XSP-KEY-AQUI
+   ```
+4. Para publicar o painel: `make release`
 
-```bash
-make up              # sobe tudo (1ª vez chama bootstrap-secrets sozinho)
-make down            # para tudo
-make logs            # logs em tempo real (todos)
-make logs S=api      # logs de um serviço só
-make status          # estado dos containers
-make release         # empacota release nova do painel
-make release-loader  # recompila só a extensão xsp_loader.so
+## Arquitetura de segurança
+
+- **AES-256-GCM** — arquivos `.php` do painel trafegam e ficam em disco cifrados
+- **Ed25519** — tokens de licença assinados com chave privada do servidor
+- **HMAC-SHA256** — autenticação de requests entre painel e API
+- **HWID binding** — licença vinculada ao hardware + IP de ativação
+- **Heartbeat 5 min** — painel bloqueia após 24h sem contato com API
+- **Clone detection** — IP de heartbeat diferente do IP de ativação → bloqueio imediato
+
+## Estrutura do repositório
+
+```
+├── Dockerfile              Imagem Docker do instalador (CI/CD)
+├── entrypoint.sh           Script bash do instalador interativo
+├── docker-compose.yml      Stack completa dos 7 serviços
+├── Caddyfile               Configuração do reverse proxy
+├── Makefile                Atalhos de operação
+├── install-painel.sh       Script de instalação no cliente
+├── api-license/            API central em Go
+├── admin-dashboard/        Painel admin PHP
+├── customer-portal/        Portal do cliente PHP
+├── landing/                Página pública de instalação
+├── painel-image/           Pipeline de build do painel cifrado
+├── xsp-loader/             Extensão PHP em C (decifragem em memória)
+└── builder/                Container de build para make release
 ```
 
-## Fluxo de validação (1 request HTTP)
+## CI/CD
+
+O GitHub Actions constrói e publica automaticamente a imagem no GHCR a cada push em `main`:
 
 ```
-[client request] → Apache (container painel)
-        ↓
-  bootstrap.php (claro)
-        ↓
-  license_check.php (claro)
-        ↓
-  [cache local válido?] ─sim→ xsp_unlock(cache.master_key) → execução normal via xsp://
-        ↓ não
-  POST /v1/heartbeat (HMAC)
-        ↓
-  api-license valida → retorna master_key_sealed (AES-GCM com HWID)
-        ↓
-  PHP unseal → xsp_unlock($master) → execução via xsp://
-        ↓
-  cache salvo (24h offline)
+ghcr.io/flaviokalleu/xsp-licensing:latest
+ghcr.io/flaviokalleu/xsp-licensing:<sha>
 ```
+
+Também cria um GitHub Release com o comando de instalação pronto.
+
+## Segredos (nunca commitar)
+
+- `.env` — ADMIN_TOKEN, Ed25519 privada, RELEASE_MASTER_KEY
+- `api-license/.env`
+- `api-license/auth/htpasswd`
+- Qualquer `*.pem` privado
+
+O `.gitignore` já exclui todos esses arquivos.
