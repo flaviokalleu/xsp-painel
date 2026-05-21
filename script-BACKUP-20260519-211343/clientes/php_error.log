@@ -1,0 +1,4 @@
+[23-Aug-2025 23:22:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function conectar_bd() in /home/geanrober/play.tvsbr.top/clientes/webhook.php:60
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/webhook.php on line 60

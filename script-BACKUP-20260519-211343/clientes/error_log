@@ -1,0 +1,118 @@
+[23-Aug-2025 21:59:09 UTC] PHP Warning:  require_once(db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/cliente/painel.php on line 10
+[23-Aug-2025 21:59:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/cliente/painel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/cliente/painel.php on line 10
+[23-Aug-2025 21:59:22 UTC] PHP Warning:  require_once(db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/cliente/painel.php on line 10
+[23-Aug-2025 21:59:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/cliente/painel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/cliente/painel.php on line 10
+[23-Aug-2025 21:59:49 UTC] PHP Warning:  require_once(db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/cliente/painel.php on line 10
+[23-Aug-2025 21:59:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/cliente/painel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/cliente/painel.php on line 10
+[23-Aug-2025 22:00:26 UTC] PHP Warning:  require_once(db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 10
+[23-Aug-2025 22:00:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/clientes/painel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 10
+[23-Aug-2025 22:02:02 UTC] PHP Warning:  require_once(api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 10
+[23-Aug-2025 22:02:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/clientes/painel.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 10
+[23-Aug-2025 22:02:36 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:02:36 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_play.users' doesn't exist in /home/geanrober/play.tvsbr.top/clientes/painel.php:16
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:02:37 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:02:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_play.users' doesn't exist in /home/geanrober/play.tvsbr.top/clientes/painel.php:16
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:04:24 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:04:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_play.users' doesn't exist in /home/geanrober/play.tvsbr.top/clientes/painel.php:16
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:10:25 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 18
+[23-Aug-2025 22:10:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'exp_date' in 'SELECT' in /home/geanrober/play.tvsbr.top/clientes/painel.php:18
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 18
+[23-Aug-2025 22:10:28 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 18
+[23-Aug-2025 22:10:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'exp_date' in 'SELECT' in /home/geanrober/play.tvsbr.top/clientes/painel.php:18
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 18
+[23-Aug-2025 22:10:30 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 18
+[23-Aug-2025 22:10:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'exp_date' in 'SELECT' in /home/geanrober/play.tvsbr.top/clientes/painel.php:18
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(18): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 18
+[23-Aug-2025 22:15:23 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[23-Aug-2025 22:17:21 UTC] PHP Warning:  require_once(vendor/autoload.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php on line 9
+[23-Aug-2025 22:17:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php on line 9
+[23-Aug-2025 23:10:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.email' in 'SELECT' in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php:25
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php(25): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php on line 25
+[23-Aug-2025 23:10:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.email' in 'SELECT' in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php:25
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php(25): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php on line 25
+[23-Aug-2025 23:10:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.email' in 'SELECT' in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php:25
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php(25): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/gerar_pagamento.php on line 25
+[24-Aug-2025 00:18:47 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:19:42 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:19:50 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:30:38 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:33:44 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:34:58 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:35:07 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 00:55:18 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:11:29 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:12:30 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:12:47 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:14:57 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:15:46 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:16:01 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:16:24 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:19:02 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:20:17 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:20:28 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:20:33 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:20:53 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:32:33 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:34:49 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:35:02 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:35:06 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:35:11 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:36:32 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:38:24 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 15
+[24-Aug-2025 01:58:29 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[24-Aug-2025 02:36:02 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[24-Aug-2025 02:36:23 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[24-Aug-2025 02:37:25 UTC] PHP Warning:  Undefined array key "user_id" in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 16
+[24-Aug-2025 02:40:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'WHERE' in /home/geanrober/play.tvsbr.top/clientes/painel.php:22
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/clientes/painel.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/clientes/painel.php on line 22

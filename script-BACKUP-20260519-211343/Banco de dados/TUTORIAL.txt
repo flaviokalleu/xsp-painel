@@ -1,0 +1,145 @@
+### Passo 1: Preparar o Ambiente
+Envie todos o contedo do Xtreamserver-Opensource-FLAVIO401(atualizaçao 08-05-2025.zip 
+para dentro da sua pasta raiz, não instale em pasta pois vai da erro. 
+Depois extraia tudo na pasta public_html
+
+⌨️Apache
+⌨️PHP 8.x
+🧑‍💻MySQL
+
+### Passo 2: Importar o Banco de Dados
+Localize o arquivo SQL do banco de dados dentro da pasta /Banco de dados.
+
+### Passo 3: Configurar os Detalhes do Banco de Dados
+Acesse o arquivo de configuração do banco de dados:
+
+Navegue até a pasta /api/controles/ no diretório onde você extraiu os arquivos. Abra o arquivo db.php com um editor de texto.
+
+Configure os dados do banco de dados: No arquivo db.php, você verá uma função para definir os dados de conexão com o banco de dados. Edite os seguintes campos para conectar ao seu seu banco de dados:
+
+$endereco = "localhost";
+
+$banco = "BANCO DO DADOS"; // nome do seu banco de dados
+
+$dbusuario = "USUARIO DO BANCO DE DADOS"; // usuario do seu banco de dados
+
+$dbsenha = "SENHA DO BANCO DE DADOS"; // senha do seu banco de dados
+
+dados de acesso
+usuario: admin
+senha: admin
+
+
+
+###############################################################
+#         GUIA DE INSTALAÇÃO - PAINEL OFFICE XTREAM
+#               Desenvolvido para Hospedagens Web
+###############################################################
+
+📌 PRÉ-REQUISITOS:
+- Hospedagem com suporte a PHP + MySQL/MariaDB.
+- Acesso ao cPanel ou painel de hospedagem (com phpMyAdmin).
+- Um domínio ou subdomínio configurado para a hospedagem.
+
+---------------------------------------------------------------
+🔹 1. ACESSAR SUA HOSPEDAGEM
+---------------------------------------------------------------
+1. Faça login no painel da sua hospedagem (cPanel ou equivalente).
+2. Crie um banco de dados MySQL:
+   - Vá em "Banco de Dados MySQL".
+   - Crie um **nome de banco de dados** (ex: office_xtream).
+   - Crie um **usuário do banco** (ex: user_xtream).
+   - Defina uma **senha segura** (anote em local seguro).
+   - Associe o usuário ao banco de dados e marque com **TODOS os privilégios**.
+
+   👉 Anote suas credenciais:
+   - Banco: office_xtream
+   - Usuário: user_xtream
+   - Senha: SUA_SENHA_FORTE
+
+---------------------------------------------------------------
+🔹 2. UPLOAD DOS ARQUIVOS DO PAINEL
+---------------------------------------------------------------
+1. No cPanel, acesse **Gerenciador de Arquivos**.
+2. Entre na pasta raiz do seu domínio (geralmente: `/public_html`).
+3. Faça upload do arquivo **ZIP do painel Office Xtream**.
+4. Após o envio, selecione o ZIP e clique em **Extrair/Descompactar**.
+
+---------------------------------------------------------------
+🔹 3. IMPORTAR O BANCO DE DADOS
+---------------------------------------------------------------
+1. Acesse **phpMyAdmin** no cPanel.
+2. Selecione o banco de dados que você criou (ex: office_xtream).
+3. Clique em **Importar**.
+4. Dentro da pasta do painel, localize a pasta **banco_de_dados**.
+5. Escolha o arquivo SQL correspondente e importe.
+
+---------------------------------------------------------------
+🔹 4. CONFIGURAÇÃO DO BANCO DE DADOS NO SISTEMA
+---------------------------------------------------------------
+Você precisa informar os dados do banco de dados nos arquivos de configuração:
+
+📂 Localize e edite os seguintes arquivos:
+- `/api/api_dashboard.php`
+- `/api/controles/db.php`
+- `/atualizador/includes/db.php`
+- `/gerenciador/db.php`
+- `/importador_m3u/db.php`
+- `/gerenciar_bouquets.php`
+
+
+✏️ Substitua com suas credenciais:
+
+<?php
+// Suas informações de conexão
+$endereco  = 'localhost';
+$banco     = 'office_xtream';   // Nome do banco de dados
+$dbusuario = 'user_xtream';     // Usuário do banco
+$dbsenha   = 'SUA_SENHA_FORTE'; // Senha do banco
+?>
+
+Salve todos os arquivos após editar.
+
+📂 Localize e edite o arquivo:
+- `/atualizador/includes/TMDB.php`
+- `/importador_m3u/TMDB.php`
+
+E coloca sua api do_tmdb entre as aspas > "coloca_sua_api_do_tmdb_aqui"
+
+Salve todos os arquivos após editar.
+
+📂 Localize e edite o arquivo:
+- `/atualizar_epg.php`
+
+// URL do arquivo EPG
+    $epg_url = "coloca_sua_url_epg_aqui"; > url da sua epg
+
+Salve o arquivo após editar.
+
+📂 Localize e edite o arquivo:
+- `/menu.php`
+
+para trocar a foto do menu
+editar linha 151 e 182 coloca  <img class="img-fluid" src="//seu_dominio_aqui/img/user.png" alt="">
+
+Salve o arquivo após editar.
+
+---------------------------------------------------------------
+🔹 5. FINALIZAÇÃO DA INSTALAÇÃO
+---------------------------------------------------------------
+1. Acesse seu domínio no navegador:
+   👉 Exemplo: https://seudominio.com.br
+2. Caso tudo esteja correto, o painel estará pronto para uso.
+3. Faça login com os dados de acesso padrão fornecidos com o painel.
+
+---------------------------------------------------------------
+🎯 DICAS DE SEGURANÇA
+---------------------------------------------------------------
+- Altere imediatamente as senhas padrão de login do painel.
+- Use uma senha forte no banco de dados.
+- Mantenha seu PHP atualizado para evitar falhas de segurança.
+- Faça backup periódico do banco de dados e arquivos.
+
+###############################################################
+✅ INSTALAÇÃO CONCLUÍDA - PAINEL OFFICE XTREAM
+###############################################################

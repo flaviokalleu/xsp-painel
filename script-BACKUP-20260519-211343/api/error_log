@@ -1,0 +1,490 @@
+[14-Jun-2025 11:29:51 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'sql_top_brtvs_to'@'localhost' (using password: YES)
+[14-Jun-2025 11:29:59 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'sql_top_brtvs_to'@'localhost' (using password: YES)
+[14-Jun-2025 11:30:12 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'sql_top_brtvs_to'@'localhost' (using password: YES)
+[14-Jun-2025 11:30:23 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'sql_top_brtvs_to'@'localhost' (using password: YES)
+[14-Jun-2025 11:30:38 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'sql_top_brtvs_to'@'localhost' (using password: YES)
+[14-Jun-2025 11:31:11 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'sql_top_brtvs_to'@'localhost' (using password: YES)
+[14-Jun-2025 11:31:59 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'geanrober_toptv'@'localhost' (using password: YES)
+[14-Jun-2025 11:32:08 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'geanrober_toptv'@'localhost' (using password: YES)
+[14-Jun-2025 11:33:13 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'geanrober_toptv'@'localhost' (using password: YES)
+[14-Jun-2025 11:33:24 America/Sao_Paulo] Erro na conexao com o banco de dados: SQLSTATE[HY000] [1045] Access denied for user 'geanrober_toptv'@'localhost' (using password: YES)
+[07-Aug-2025 02:41:09 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:41:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:46:28 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:46:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:48:18 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:48:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:48:28 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:48:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 6
+[07-Aug-2025 02:51:46 UTC] PHP Warning:  require_once(../includes/db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:51:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:51:51 UTC] PHP Warning:  require_once(../includes/db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:51:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:51:58 UTC] PHP Warning:  require_once(../includes/db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:51:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:52:18 UTC] PHP Warning:  require_once(../includes/db.php): Failed to open stream: No such file or directory in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[07-Aug-2025 02:52:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../includes/db.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/turboflix.tvsbr.top/api/alterar_links.php on line 7
+[06-Aug-2025 23:59:35 America/Sao_Paulo] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_url' in 'SET'
+[07-Aug-2025 09:17:57 America/Sao_Paulo] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 09:28:58 America/Sao_Paulo] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 09:29:19 America/Sao_Paulo] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 09:35:36 America/Sao_Paulo] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 09:36:07 America/Sao_Paulo] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 12:49:54 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 12:50:14 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 13:04:14 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 13:04:28 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 13:07:31 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 13:07:44 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[07-Aug-2025 13:48:37 UTC] Erro na atualiza莽茫o em massa: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stream_source' in 'SET'
+[11-Aug-2025 18:00:33 UTC] PHP Warning:  Undefined array key "admin_id" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 338
+[11-Aug-2025 18:40:31 UTC] PHP Warning:  Undefined variable $db in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:40:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:41:08 UTC] PHP Warning:  Undefined variable $db in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:41:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:41:12 UTC] PHP Warning:  Undefined variable $db in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:41:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:41:20 UTC] PHP Warning:  Undefined variable $db in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:41:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 34
+[11-Aug-2025 18:44:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 35
+[11-Aug-2025 18:45:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 35
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Undefined array key "order" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Undefined array key "" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Undefined array key "order" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMIT 10 OFFSET 0' at line 1 in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php:390
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php(390): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 390
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Undefined array key "order" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Undefined array key "" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Undefined array key "order" in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 376
+[11-Aug-2025 19:00:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMIT 10 OFFSET 0' at line 1 in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php:390
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php(390): PDOStatement->execute()
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/listar-clientes.php on line 390
+[12-Aug-2025 10:58:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_jean.stream_category' doesn't exist in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:85
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/categorias.php(85): PDO->query('SELECT COUNT(id...')
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 85
+[12-Aug-2025 10:58:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_jean.stream_category' doesn't exist in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:85
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/categorias.php(85): PDO->query('SELECT COUNT(id...')
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 85
+[12-Aug-2025 11:01:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_jean.stream_category' doesn't exist in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:85
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/categorias.php(85): PDO->query('SELECT COUNT(id...')
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 85
+[12-Aug-2025 11:04:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_jean.stream_category' doesn't exist in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:85
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/categorias.php(85): PDO->query('SELECT COUNT(id...')
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 85
+[12-Aug-2025 11:04:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_jean.stream_category' doesn't exist in /home/geanrober/tvbox.tvsbr.top/api/categorias.php:85
+Stack trace:
+#0 /home/geanrober/tvbox.tvsbr.top/api/categorias.php(85): PDO->query('SELECT COUNT(id...')
+#1 {main}
+  thrown in /home/geanrober/tvbox.tvsbr.top/api/categorias.php on line 85
+[20-Aug-2025 14:06:38 UTC] PHP Warning:  Undefined array key "genres" in /home/geanrober/play.tvsbr.top/models/TMDB.php on line 23
+[20-Aug-2025 14:06:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/geanrober/play.tvsbr.top/models/TMDB.php on line 23
+[20-Aug-2025 14:06:38 UTC] PHP Warning:  file_get_contents(https://api.themoviedb.org/3/tv/290725/credits?api_key=66d600a2e10bb528752724cddadf6f8c&amp;language=pt-BR): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/geanrober/play.tvsbr.top/models/TMDB.php on line 27
+[20-Aug-2025 14:06:38 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/play.tvsbr.top/models/TMDB.php on line 30
+[20-Aug-2025 14:06:38 UTC] PHP Fatal error:  Uncaught TypeError: array_slice(): Argument #1 ($array) must be of type array, null given in /home/geanrober/play.tvsbr.top/models/TMDB.php:30
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/models/TMDB.php(30): array_slice()
+#1 /home/geanrober/play.tvsbr.top/api/tmdb_series.php(15): models\TMDB::getSerie()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/models/TMDB.php on line 30
+[21-Aug-2025 03:55:13 UTC] PHP Warning:  file_get_contents(../version.json): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/check_update.php on line 17
+[21-Aug-2025 03:55:15 UTC] PHP Warning:  file_get_contents(../version.json): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/check_update.php on line 17
+[21-Aug-2025 03:56:03 UTC] PHP Warning:  file_get_contents(../version.json): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/check_update.php on line 17
+[21-Aug-2025 03:59:35 UTC] PHP Warning:  file_get_contents(../version.json): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/check_update.php on line 17
+[22-Aug-2025 12:52:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(63): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[22-Aug-2025 12:52:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(63): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[22-Aug-2025 12:53:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(63): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[22-Aug-2025 12:54:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(63): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[22-Aug-2025 12:56:15 UTC] --- Chatbot API Invocada ---
+[22-Aug-2025 12:56:15 UTC] Arquivos de função carregados com sucesso.
+[22-Aug-2025 12:56:15 UTC] Dados recebidos do App: {"receiveMessageAppId":"com.whatsapp.w4b","receiveMessagePattern":["*"],"senderName":"Jean Filho Vivo","groupName":"","senderMesage":"4","senderMessage":"4","messageDateTime":1755867374000,"isMessageFromGroup":false}
+[22-Aug-2025 12:56:15 UTC] Admin autenticado com sucesso: ID 11
+[22-Aug-2025 12:56:15 UTC] Sessão simulada para admin_id: 11
+[22-Aug-2025 12:56:15 UTC] Mensagem recebida do usuário: 4
+[22-Aug-2025 12:56:15 UTC] Regra encontrada! ID: 1, Ação: test_iptv
+[22-Aug-2025 12:56:15 UTC] Entrou na ação 'test_iptv'. Tentando criar teste...
+[22-Aug-2025 12:56:15 UTC] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 598
+[22-Aug-2025 12:56:15 UTC] PHP Deprecated:  preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 610
+[22-Aug-2025 12:56:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(87): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[22-Aug-2025 12:59:34 UTC] --- Chatbot API Invocada ---
+[22-Aug-2025 12:59:34 UTC] Arquivos de função carregados com sucesso.
+[22-Aug-2025 12:59:34 UTC] Dados recebidos do App: null
+[22-Aug-2025 12:59:34 UTC] Admin autenticado com sucesso: ID 11
+[22-Aug-2025 12:59:34 UTC] Sessão simulada para admin_id: 11
+[22-Aug-2025 12:59:34 UTC] Mensagem do usuário vazia. Encerrando.
+[22-Aug-2025 13:02:03 UTC] --- Chatbot API Invocada ---
+[22-Aug-2025 13:02:03 UTC] Arquivos de função carregados com sucesso.
+[22-Aug-2025 13:02:03 UTC] Dados recebidos do App: {"receiveMessageAppId":"com.whatsapp.w4b","receiveMessagePattern":["*"],"senderName":"Jean Filho Vivo","groupName":"","senderMesage":"4","senderMessage":"4","messageDateTime":1755867721000,"isMessageFromGroup":false}
+[22-Aug-2025 13:02:03 UTC] Admin autenticado com sucesso: ID 11
+[22-Aug-2025 13:02:03 UTC] Sessão simulada para admin_id: 11
+[22-Aug-2025 13:02:03 UTC] Mensagem recebida do usuário: 4
+[22-Aug-2025 13:02:03 UTC] Regra encontrada! ID: 1, Ação: test_iptv
+[22-Aug-2025 13:02:03 UTC] Entrou na ação 'test_iptv'. Tentando criar teste...
+[22-Aug-2025 13:02:03 UTC] Resultado da função confirme_adicionar_testes(): {"title":"Conclu\u00eddo!","msg":"Cliente inserido com sucesso","icon":"success"}
+[22-Aug-2025 13:02:03 UTC] Criação de teste foi um SUCESSO. Montando a mensagem.
+[22-Aug-2025 13:02:03 UTC] Enviando resposta final: Teste gerado!
+[22-Aug-2025 13:02:25 UTC] PHP Warning:  Undefined array key "admin_id" in /home/geanrober/play.tvsbr.top/api/listar-clientes.php on line 122
+[22-Aug-2025 13:24:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/geanrober/play.tvsbr.top/api/controles/testes.php:139
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(139): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(49): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 139
+[22-Aug-2025 13:28:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(49): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[22-Aug-2025 13:30:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'V_total' cannot be null in /home/geanrober/play.tvsbr.top/api/controles/testes.php:684
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/controles/testes.php(684): PDOStatement->execute()
+#1 /home/geanrober/play.tvsbr.top/api/chatbot_office_api.php(49): confirme_adicionar_testes()
+#2 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/testes.php on line 684
+[23-Aug-2025 17:59:36 UTC] PHP Warning:  require_once(../controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/listar-clientes.php on line 16
+[23-Aug-2025 22:22:39 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function confirme_edite_cliente(), 8 passed in /home/geanrober/play.tvsbr.top/api/clientes.php on line 91 and at least 18 expected in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:99
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(91): confirme_edite_cliente()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 99
+[23-Aug-2025 22:22:43 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function confirme_edite_cliente(), 8 passed in /home/geanrober/play.tvsbr.top/api/clientes.php on line 91 and at least 18 expected in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:99
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(91): confirme_edite_cliente()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 99
+[23-Aug-2025 22:22:47 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function confirme_edite_cliente(), 8 passed in /home/geanrober/play.tvsbr.top/api/clientes.php on line 91 and at least 18 expected in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:99
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(91): confirme_edite_cliente()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 99
+[23-Aug-2025 22:23:10 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function confirme_edite_cliente(), 8 passed in /home/geanrober/play.tvsbr.top/api/clientes.php on line 91 and at least 18 expected in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:99
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(91): confirme_edite_cliente()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 99
+[25-Aug-2025 11:59:18 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:20 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:20 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:21 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:21 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:21 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:26 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:27 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:27 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:27 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:28 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:30 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:32 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 11:59:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:00:31 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:00:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:00:32 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:00:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:00:32 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:00:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:5
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 5
+[25-Aug-2025 12:04:01 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:02 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:02 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:02 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:04 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:05 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:06 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:07 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:08 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:22 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:23 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:04:23 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:10
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 10
+[25-Aug-2025 12:10:26 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:11
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:29 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:11
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:29 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:11
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:29 UTC] PHP Warning:  require_once(/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php): Failed to open stream: No such file or directory in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[25-Aug-2025 12:10:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/geanrober/play.tvsbr.top/api/controles/api/controles/db.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/geanrober/play.tvsbr.top/api/controles/clientes.php:11
+Stack trace:
+#0 /home/geanrober/play.tvsbr.top/api/clientes.php(4): require_once()
+#1 {main}
+  thrown in /home/geanrober/play.tvsbr.top/api/controles/clientes.php on line 11
+[26-Aug-2025 21:53:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/topiptv.tvsbr.top/models/TMDB.php on line 59
+[26-Aug-2025 21:53:35 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/geanrober/topiptv.tvsbr.top/models/TMDB.php on line 59
+[26-Aug-2025 21:53:35 UTC] PHP Warning:  file_get_contents(https://api.themoviedb.org/3/movie/A casa de cera/credits?api_key=66d600a2e10bb528752724cddadf6f8c&amp;language=pt-BR): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home/geanrober/topiptv.tvsbr.top/models/TMDB.php on line 63
+[26-Aug-2025 21:53:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/geanrober/topiptv.tvsbr.top/models/TMDB.php on line 66
+[26-Aug-2025 21:53:35 UTC] PHP Fatal error:  Uncaught TypeError: array_slice(): Argument #1 ($array) must be of type array, null given in /home/geanrober/topiptv.tvsbr.top/models/TMDB.php:66
+Stack trace:
+#0 /home/geanrober/topiptv.tvsbr.top/models/TMDB.php(66): array_slice()
+#1 /home/geanrober/topiptv.tvsbr.top/api/tmdb.php(21): models\TMDB::getFilme()
+#2 {main}
+  thrown in /home/geanrober/topiptv.tvsbr.top/models/TMDB.php on line 66
+[05-Sep-2025 00:04:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jean1' for key 'usuario' in /home/geanrober/topiptv.tvsbr.top/api/controles/clientes.php:97
+Stack trace:
+#0 /home/geanrober/topiptv.tvsbr.top/api/controles/clientes.php(97): PDOStatement->execute()
+#1 /home/geanrober/topiptv.tvsbr.top/api/testes.php(76): confirme_edite_cliente()
+#2 {main}
+  thrown in /home/geanrober/topiptv.tvsbr.top/api/controles/clientes.php on line 97
+[05-Sep-2025 00:05:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'jean1' for key 'usuario' in /home/geanrober/topiptv.tvsbr.top/api/controles/clientes.php:97
+Stack trace:
+#0 /home/geanrober/topiptv.tvsbr.top/api/controles/clientes.php(97): PDOStatement->execute()
+#1 /home/geanrober/topiptv.tvsbr.top/api/testes.php(76): confirme_edite_cliente()
+#2 {main}
+  thrown in /home/geanrober/topiptv.tvsbr.top/api/controles/clientes.php on line 97
+[06-Sep-2025 03:20:24 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 143368192 bytes) in /home/geanrober/topiptv.tvsbr.top/api/proxy.php on line 38
+[06-Sep-2025 03:21:59 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 143368192 bytes) in /home/geanrober/topiptv.tvsbr.top/api/proxy.php on line 38
+[06-Sep-2025 03:23:02 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 143368192 bytes) in /home/geanrober/topiptv.tvsbr.top/api/proxy.php on line 38
+[06-Sep-2025 03:24:23 UTC] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 143368192 bytes) in /home/geanrober/topiptv.tvsbr.top/api/proxy.php on line 38

@@ -1,0 +1,5 @@
+[29-Aug-2025 01:34:24 UTC] Erro ao salvar filme: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tmdb_id' in 'INSERT INTO'
+[29-Aug-2025 01:34:49 UTC] Erro ao salvar filme: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tmdb_id' in 'INSERT INTO'
+[29-Aug-2025 11:05:21 UTC] Erro ao salvar filme: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'geanrober_topiptv.filmes' doesn't exist
+[29-Aug-2025 12:24:44 UTC] Erro ao excluir série: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'series_id' in 'WHERE'
+[29-Aug-2025 12:30:11 UTC] Erro ao excluir série: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'series_id' in 'WHERE'

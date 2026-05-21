@@ -1,0 +1,26 @@
+--- LOG INICIADO EM 2025-08-12 12:44:02 ---
+1. Dados brutos recebidos: [{"id":1,"ordem":1},{"id":3,"ordem":2},{"id":35,"ordem":3},{"id":37,"ordem":4},{"id":2,"ordem":5},{"id":4,"ordem":6},{"id":6,"ordem":7},{"id":39,"ordem":8},{"id":5,"ordem":9},{"id":7,"ordem":10}]
+2. Transação com o banco de dados iniciada.
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=1, ordem=1
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=3, ordem=2
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=35, ordem=3
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=37, ordem=4
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=2, ordem=5
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=4, ordem=6
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=6, ordem=7
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=39, ordem=8
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=5, ordem=9
+4. Linhas afetadas por este comando: 0
+3. Preparando SQL: UPDATE `categoria` SET `position` = :ordem WHERE `id` = :id com id=7, ordem=10
+4. Linhas afetadas por este comando: 0
+5. Transação concluída. Total de linhas afetadas: 0
+--- FIM DO LOG ---
+

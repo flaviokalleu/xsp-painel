@@ -1,0 +1,11 @@
+/*!
+ * jQuery UI Touch Punch 0.2.3
+ *
+ * Copyright 2011–2014, David Furrer
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Depends:
+ * jquery.ui.widget.js
+ * jquery.ui.mouse.js
+ */
+(function(b){b.support.touch="ontouchend"in document;if(!b.support.touch){return;}var c=b.ui.mouse.prototype,e=c._mouseInit,a;function d(g,h){if(g.originalEvent.touches.length>1){return;}g.preventDefault();var f=g.originalEvent.changedTouches[0],i=document.createEvent("MouseEvents");i.initMouseEvent(h,true,true,window,1,f.screenX,f.screenY,f.clientX,f.clientY,false,false,false,false,0,null);g.target.dispatchEvent(i);}c._mouseInit=function(){var g=this;g.element.bind("touchstart.ui.mouse",function(h){return g._touchStart(h);});e.call(g);};c._touchStart=function(g){var f=this;if(a||!f.options.disabled){if(g.originalEvent.touches.length>1){return;}a=true;f._touchMoved=false;d(g,"mousedown");}f._touchMoved=function(){a=false;d(g,"mousemove");};b(document).bind("touchmove.ui.mouse",f._touchMoved);b(document).bind("touchend.ui.mouse",function(h){if(a){d(h,"mouseup");}a=false;b(document).unbind("touchmove.ui.mouse",f._touchMoved);b(document).unbind("touchend.ui.mouse",arguments.callee);});};})(jQuery);

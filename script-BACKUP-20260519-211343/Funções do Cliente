@@ -1,0 +1,49 @@
+<?php
+// ... (todas as suas funções de chatbot existentes ficam aqui em cima) ...
+
+// ======================================================
+// FUNÇÕES PARA A ÁREA DO CLIENTE
+// ======================================================
+
+/**
+ * Faz o login de um cliente com base no usuário e senha.
+ * @param string $usuario O nome de usuário do cliente.
+ * @param string $senha A senha do cliente.
+ * @return bool True se o login for bem-sucedido, false caso contrário.
+ */
+function loginCliente($usuario, $senha) {
+    $conn = conectar_bd();
+    $stmt = $conn->prepare("SELECT id FROM clientes WHERE usuario = ? AND senha = ? AND is_trial = 0 LIMIT 1");
+    $stmt->execute([$usuario, $senha]);
+    $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($cliente) {
+        $_SESSION['cliente_id'] = $cliente['id'];
+        return true;
+    }
+    return false;
+}
+
+/**
+ * Verifica se um cliente está logado. Se não estiver, redireciona para o login.
+ */
+function isClienteLogged() {
+    if (!isset($_SESSION['cliente_id'])) {
+        header("Location: login_cliente.php");
+        exit;
+    }
+}
+
+/**
+ * Obtém os dados do cliente que está atualmente logado.
+ * @return array|false Os dados do cliente ou false se não for encontrado.
+ */
+function getClienteLogado() {
+    if (isset($_SESSION['cliente_id'])) {
+        $conn = conectar_bd();
+        $stmt = $conn->prepare("SELECT * FROM clientes WHERE id = ?");
+        $stmt->execute([$_SESSION['cliente_id']]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    return false;
+}

@@ -1,0 +1,197 @@
+/* Estilo Profissional - Tema Escuro */
+body {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #34495e;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ffffff;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.actions {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #3498db; /* Azul */
+}
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-success {
+    background-color: #2ecc71; /* Verde */
+}
+.btn-success:hover {
+    background-color: #27ae60;
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Vermelho */
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-warning {
+    background-color: #f39c12; /* Laranja */
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.btn-warning:hover {
+    background-color: #e67e22;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #46607a;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: #1abc9c;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+table tr:nth-child(even) {
+    background-color: #3a536b;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.alert-success {
+    background-color: #27ae60;
+    color: white;
+}
+.alert-error {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #bdc3c7;
+}
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    border: 1px solid #46607a;
+    border-radius: 5px;
+    color: #ecf0f1;
+    font-size: 16px;
+    box-sizing: border-box; /* Importante para o padding não aumentar a largura */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Estilos para o Box de Mensagem de Renovação */
+.renewal-message-box {
+    position: relative; /* Adicionado para posicionar o botão de fechar */
+    background-color: #2c3e50;
+    border: 1px solid #1abc9c;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.renewal-message-box h4 {
+    margin-top: 0;
+    color: #2ecc71;
+    font-size: 1.5em;
+}
+
+.message-content {
+    background-color: #212f3d;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    white-space: pre-wrap; /* Garante a quebra de linha */
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 1.1em;
+    color: #ecf0f1;
+    border: 1px dashed #46607a;
+}
+
+.message-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Novo Estilo para o Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ecf0f1;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    line-height: 1;
+}
+.close-btn:hover {
+    opacity: 1;
+}

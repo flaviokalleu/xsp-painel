@@ -1,0 +1,41 @@
+2025-08-23 23:12:10 - Assinatura VÁLIDA. Processando dados: {"resource":"122926267563","topic":"payment"}
+2025-08-23 23:12:10 - Assinatura VÁLIDA. Processando dados: {"action":"payment.created","api_version":"v1","data":{"id":"122926267563"},"date_created":"2025-08-23T23:12:09Z","id":124007317921,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:12:51 - Assinatura VÁLIDA. Processando dados: {"action":"payment.updated","api_version":"v1","data":{"id":"122926267563"},"date_created":"2025-08-23T23:12:09Z","id":124091964466,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:12:51 - Assinatura VÁLIDA. Processando dados: {"resource":"122926267563","topic":"payment"}
+2025-08-23 23:21:30 - DADOS RECEBIDOS: {"action":"payment.created","api_version":"v1","data":{"id":"123465224122"},"date_created":"2025-08-23T23:21:30Z","id":124007641285,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:21:30 - INFO: Recebido ID de pagamento: 123465224122
+2025-08-23 23:21:30 - DADOS RECEBIDOS: {"resource":"123465224122","topic":"payment"}
+2025-08-23 23:21:31 - INFO: Status do pagamento: pending. Referência externa: 8
+2025-08-23 23:22:05 - DADOS RECEBIDOS: {"resource":"123465224122","topic":"payment"}
+2025-08-23 23:22:06 - DADOS RECEBIDOS: {"action":"payment.updated","api_version":"v1","data":{"id":"123465224122"},"date_created":"2025-08-23T23:21:30Z","id":124092215844,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:22:06 - INFO: Recebido ID de pagamento: 123465224122
+2025-08-23 23:22:06 - INFO: Status do pagamento: approved. Referência externa: 8
+2025-08-23 23:25:42 - DADOS RECEBIDOS: {"action":"payment.created","api_version":"v1","data":{"id":"123465230724"},"date_created":"2025-08-23T23:25:41Z","id":124007789311,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:25:42 - INFO: Recebido ID de pagamento: 123465230724
+2025-08-23 23:25:42 - DADOS RECEBIDOS: {"resource":"123465230724","topic":"payment"}
+2025-08-23 23:25:42 - INFO: Status do pagamento: pending. Referência externa: 8
+2025-08-23 23:26:04 - DADOS RECEBIDOS: {"action":"payment.updated","api_version":"v1","data":{"id":"123465230724"},"date_created":"2025-08-23T23:25:41Z","id":124007857343,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:26:04 - INFO: Recebido ID de pagamento: 123465230724
+2025-08-23 23:26:04 - DADOS RECEBIDOS: {"resource":"123465230724","topic":"payment"}
+2025-08-23 23:26:04 - INFO: Status do pagamento: approved. Referência externa: 8
+2025-08-23 23:26:04 - INFO: Cliente 'jean1' encontrado no banco. Renovando...
+2025-08-23 23:26:04 - DEBUG: Chamando API do Painel: https://play.tvsbr.top/api.php?username=jeanrs&password=Jean%40909110&action=edit_user&user_id=8&exp_date=1758583564
+2025-08-23 23:26:04 - INFO: Resposta do Painel (Código: 404): <!DOCTYPE html>
+<html style="height:100%">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title> 404 Not Found
+</title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
+<body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+<div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+        <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">404</h1>
+<h2 style="margin-top:20px;font-size: 30px;">Not Found
+</h2>
+<p>The resource requested could not be found on this server!</p>
+</div></div></body></html>
+
+2025-08-23 23:26:04 - ERRO FINAL: Falha ao confirmar a renovação no painel. Verifique as credenciais do admin e se o painel está online.
+2025-08-23 23:27:32 - DADOS RECEBIDOS: {"action":"payment.created","api_version":"v1","data":{"id":"123464083966"},"date_created":"2025-08-23T23:27:31Z","id":124092321306,"live_mode":true,"type":"payment","user_id":"320369705"}
+2025-08-23 23:27:32 - INFO: Recebido ID de pagamento: 123464083966
+2025-08-23 23:27:32 - DADOS RECEBIDOS: {"resource":"123464083966","topic":"payment"}
+2025-08-23 23:27:32 - INFO: Status do pagamento: pending. Referência externa: 8
