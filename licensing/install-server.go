@@ -488,6 +488,12 @@ func printSummary(env envMap, adminPassClear string, showPass bool) {
 	fmt.Println()
 }
 
+// inDocker detecta se está rodando dentro de um container Docker.
+func inDocker() bool {
+	_, err := os.Stat("/.dockerenv")
+	return err == nil
+}
+
 // ── main ──────────────────────────────────────────────────────────────────────
 
 func main() {
@@ -505,11 +511,14 @@ func main() {
 
 	// ── pré-condições ────────────────────────────────────────────────────────
 	if os.Getuid() != 0 {
-		die("Rode como root: sudo ./install-server")
+		die("Rode como root: sudo ./install-server  |  docker run ... (veja README)")
 	}
-	osID := capture("sh", "-c", `. /etc/os-release && echo $ID`)
-	if osID != "ubuntu" && osID != "debian" {
-		die("SO não suportado: " + osID + " (requer ubuntu ou debian)")
+	// Dentro de container Docker pulamos checagem de OS do host
+	if !inDocker() {
+		osID := capture("sh", "-c", `. /etc/os-release && echo $ID`)
+		if osID != "ubuntu" && osID != "debian" {
+			die("SO não suportado: " + osID + " (requer ubuntu ou debian)")
+		}
 	}
 
 	// ── .env: carrega ou cria ────────────────────────────────────────────────
@@ -637,29 +646,31 @@ func main() {
 		runSh("apt-get install -y -qq docker-compose-plugin")
 	}
 
-	// ── Firewall ─────────────────────────────────────────────────────────────
-	if _, err := exec.LookPath("ufw"); err == nil {
-		step("Configurando firewall...")
-		run("ufw", "--force", "reset")
-		run("ufw", "default", "deny", "incoming")
-		run("ufw", "default", "allow", "outgoing")
-		run("ufw", "allow", "OpenSSH")
-		run("ufw", "allow", "80/tcp")
-		run("ufw", "allow", "443/tcp")
-		switch mode {
-		case "U":
-			run("ufw", "allow", "5000/tcp")
-			ok("UFW ativo (22, 80, 443, 5000).")
-		case "I":
-			run("ufw", "allow", "8080/tcp")
-			run("ufw", "allow", "8081/tcp")
-			run("ufw", "allow", "8082/tcp")
-			run("ufw", "allow", "5000/tcp")
-			ok("UFW ativo (22, 80, 8080, 8081, 8082, 5000).")
-		default:
-			ok("UFW ativo (22, 80, 443).")
+	// ── Firewall (só no host, não dentro de container) ───────────────────────
+	if !inDocker() {
+		if _, err := exec.LookPath("ufw"); err == nil {
+			step("Configurando firewall...")
+			run("ufw", "--force", "reset")
+			run("ufw", "default", "deny", "incoming")
+			run("ufw", "default", "allow", "outgoing")
+			run("ufw", "allow", "OpenSSH")
+			run("ufw", "allow", "80/tcp")
+			run("ufw", "allow", "443/tcp")
+			switch mode {
+			case "U":
+				run("ufw", "allow", "5000/tcp")
+				ok("UFW ativo (22, 80, 443, 5000).")
+			case "I":
+				run("ufw", "allow", "8080/tcp")
+				run("ufw", "allow", "8081/tcp")
+				run("ufw", "allow", "8082/tcp")
+				run("ufw", "allow", "5000/tcp")
+				ok("UFW ativo (22, 80, 8080, 8081, 8082, 5000).")
+			default:
+				ok("UFW ativo (22, 80, 443).")
+			}
+			run("ufw", "--force", "enable")
 		}
-		run("ufw", "--force", "enable")
 	}
 
 	// ── Segredos (idempotente) ────────────────────────────────────────────────
