@@ -1,0 +1,26 @@
+# Backup do painel original — não commitar
+script-BACKUP-*/
+
+# Pasta licensing tem git próprio (repo xsp-licensing)
+licensing/
+
+# Artefatos gerados
+*.zip
+*.tar.gz
+
+# Segredos
+.env
+*.pem
+*.key
+
+# Instalador compilado
+instalador/install-server
+instalador/*.exe
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Instruções internas do Claude
+CLAUDE.md
