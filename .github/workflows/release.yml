@@ -1,0 +1,47 @@
+name: Build Client Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish client source package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build source ZIP
+        run: |
+          mkdir -p package/xsp-painel
+          cp -a script package/xsp-painel/script
+          zip -qr xsp-painel-source.zip package/xsp-painel
+          ls -lh xsp-painel-source.zip
+
+      - name: Generate tag
+        id: tag
+        run: echo "tag=v$(date +'%Y.%m.%d')-$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: XSP Painel ${{ steps.tag.outputs.tag }}
+          make_latest: true
+          files: xsp-painel-source.zip
+          body: |
+            Pacote fonte do painel para instalacao via xsp-licensing.
+
+            Asset usado pelo instalador do cliente:
+            `xsp-painel-source.zip`
+
+            Commit: ${{ github.sha }}
