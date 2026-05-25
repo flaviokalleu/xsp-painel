@@ -3,78 +3,23 @@
 require_once("menu.php");
 
 // =======================================================
-// INÍCIO DO CONTROLE DE ACESSO RBAC COM MENSAGEM CUSTOMIZADA
-// Baseado em $_SESSION['nivel_admin'] == 1 (Administrador)
+// CONTROLE DE ACESSO: admin (nivel 1) vê tudo; revendedor (nivel 0) vê só os seus.
+// Qualquer outro nível é bloqueado.
 // =======================================================
-
-// 1. Verifica se o usuário NÃO é o Administrador (nível 1).
-if (!isset($_SESSION['nivel_admin']) || $_SESSION['nivel_admin'] != 1) {
-    // Se não for Admin, renderiza a tela de bloqueio e para.
+if (!isset($_SESSION['nivel_admin']) || ($_SESSION['nivel_admin'] != 1 && $_SESSION['nivel_admin'] != 0)) {
     http_response_code(403);
-    
-    // Renderiza a mensagem de acesso negado com estilo Neon
-    echo '<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso Proibido</title>
-    <style>
-        body {
-            background-color: #000; /* Fundo preto */
-            color: #fff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            flex-direction: column;
-            text-align: center;
-        }
-        .neon-box {
-            border: 2px solid #dc3545;
-            padding: 30px 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 5px #dc3545, 0 0 10px #dc3545, 0 0 20px #dc3545, 0 0 40px #dc3545;
-            animation: flicker 1.5s infinite alternate;
-        }
-        .neon-text {
-            color: #ff416e; /* Vermelho Neon Brilhante */
-            font-size: 2.5rem;
-            text-shadow: 0 0 7px #fff, 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c, 0 0 40px #ff004c;
-            margin-bottom: 20px;
-        }
-        .sub-text {
-            color: #ff99aa;
-            font-size: 1.2rem;
-        }
-        @keyframes flicker {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-                text-shadow: 0 0 7px #fff, 0 0 10px #ff004c, 0 0 20px #ff004c, 0 0 30px #ff004c;
-                box-shadow: 0 0 5px #dc3545, 0 0 10px #dc3545, 0 0 20px #dc3545, 0 0 40px #dc3545;
-            }
-            20%, 24%, 55% {
-                text-shadow: none;
-                box-shadow: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="neon-box">
-        <div class="neon-text">ACESSO RESTRITO (403)</div>
-        <p class="sub-text">Você não possui permissão de Administrador para visualizar esta página.</p>
-        <p class="sub-text">Retorne ao painel principal.</p>
-        <a href="dashboard.php" style="color: #4CAF50; text-decoration: none; font-weight: bold; margin-top: 20px; display: block;">Clique aqui para voltar</a>
-    </div>
-</body>
-</html>';
-    exit; // IMPEDE A EXECUÇÃO DO CÓDIGO DO MONITOR
+    echo '<!DOCTYPE html><html lang="pt-br"><head><meta charset="UTF-8">
+<title>Acesso Proibido</title></head><body style="background:#000;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;">
+<div style="text-align:center;border:2px solid #dc3545;padding:30px 50px;border-radius:10px;">
+<h2 style="color:#ff416e;">ACESSO RESTRITO (403)</h2>
+<p>Você não possui permissão para visualizar esta página.</p>
+<a href="dashboard.php" style="color:#4CAF50;">Voltar ao painel</a>
+</div></body></html>';
+    exit;
 }
 
-// =======================================================
-// FIM DO CONTROLE DE ACESSO
+// Identifica o nível de acesso para uso nos includes da API
+$_SESSION['dashboard_filter_by_admin'] = ($_SESSION['nivel_admin'] == 0);
 // =======================================================
 ?>
 <!DOCTYPE html>
@@ -255,7 +200,11 @@ justify-content: space-between;
 <body>
 
 <div class="main-header">
-<span style="font-size: 20px; font-weight: 500;">Monitor de Usuários Online</span>
+<span style="font-size: 20px; font-weight: 500;">Monitor de Usuários Online
+<?php if ($_SESSION['nivel_admin'] == 0): ?>
+<small style="font-size:13px;font-weight:400;opacity:.8;">(Meus Clientes)</small>
+<?php endif; ?>
+</span>
 <div class="header-actions">
 <button id="kickAllButton" class="btn-kick-all">Derrubar Tudo</button>
 </div>
