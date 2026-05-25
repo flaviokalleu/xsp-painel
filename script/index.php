@@ -207,7 +207,7 @@ if (file_exists($config_file)) {
         
         // Pequena e leve biblioteca de partículas em JS puro
         const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('d');
+        const ctx = canvas.getContext('2d');
         document.getElementById('particles-js').appendChild(canvas);
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
