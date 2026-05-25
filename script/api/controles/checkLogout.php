@@ -1,32 +1,55 @@
 <?php
 
+function redirectLogin($url = './index.php') {
+    if (!headers_sent()) {
+        header('Location: ' . $url);
+    } else {
+        echo '<script>window.location.href=' . json_encode($url) . ';</script>';
+    }
+    exit();
+}
+
+function destroyCurrentSession() {
+    $_SESSION = array();
+    session_unset();
+    session_destroy();
+
+    if (!headers_sent() && isset($_COOKIE[session_name()])) {
+        setcookie(session_name(), '', time() - 3600, '/');
+    }
+}
+
+function regenerateSessionSafely() {
+    if (headers_sent()) {
+        return;
+    }
+
+    $now = time();
+    $lastRegenerated = (int)($_SESSION['last_regenerated'] ?? 0);
+    if ($lastRegenerated === 0 || ($now - $lastRegenerated) > 300) {
+        session_regenerate_id(true);
+        $_SESSION['last_regenerated'] = $now;
+    }
+}
+
 function checkLogout() {
 
     if (session_status() !== PHP_SESSION_ACTIVE) {
-        header('Location: ./index.php');
-        exit();
+        redirectLogin();
     }
 
     if (empty($_SESSION['logged_in_fxtream'])) {
-        header('Location: ./index.php');
-        exit();
+        redirectLogin();
     }
 
     if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 3600)) {
 
-        $_SESSION = array();
-        session_unset();
-        session_destroy();
+        destroyCurrentSession();
 
-        if (isset($_COOKIE[session_name()])) {
-            setcookie(session_name(), '', time() - 3600, '/');
-        }
-
-        header('Location: ./index.php');
-        exit();
+        redirectLogin();
     }
 
-    session_regenerate_id(true);
+    regenerateSessionSafely();
 
     $_SESSION['last_activity'] = time();
 }
@@ -54,13 +77,7 @@ function checkLogoutapi() {
 
     if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 3600)) {
 
-        $_SESSION = array();
-        session_unset();
-        session_destroy();
-
-        if (isset($_COOKIE[session_name()])) {
-            setcookie(session_name(), '', time() - 3600, '/');
-        }
+        destroyCurrentSession();
 
         $resposta['title'] = "Erro!";
         $resposta['msg'] = "sessao expirada faça o login novamente";
