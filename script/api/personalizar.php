@@ -9,7 +9,7 @@ function read_config($file) {
     if (file_exists($file)) {
         return json_decode(file_get_contents($file), true);
     }
-    return ['title' => 'TOP IPTV', 'logo_path' => './img/logo_tranparente2.png'];
+    return ['title' => 'PB&CTV', 'logo_path' => './img/logo_tranparente2.png'];
 }
 
 // Função para salvar o arquivo de configuração

@@ -76,7 +76,7 @@ foreach ($chatbotRules as $rule) {
                     // ===============================================
                     // SUA MENSAGEM ADICIONADA AQUI
                     // ===============================================
-                    $response_message .= "\n\nObrigado pela preferencia, TOP IPTV";
+                    $response_message .= "\n\nObrigado pela preferencia, PB&CTV";
                     // ===============================================
 
                 } else {

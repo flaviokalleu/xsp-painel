@@ -26,7 +26,7 @@ $apps = $conexao->query("SELECT * FROM loja_apps ORDER BY app_nome ASC")->fetchA
         background-position: center center;
         /* --- IMPORTANTE: TROQUE A URL DA IMAGEM ABAIXO --- */
         /* Coloque o link para a sua imagem de fundo aqui */
-        background-image: url('http://topiptv.app.br/img/marvel.jpeg'); /* Exemplo com imagem genérica */
+        background-image: url('./img/marvel.jpeg'); /* Exemplo com imagem genérica */
     }
     .loja-header::after { /* Efeito de escurecimento para o texto ficar legível */
         content: '';

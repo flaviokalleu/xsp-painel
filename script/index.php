@@ -14,7 +14,7 @@ if (file_exists($config_file)) {
     $config = json_decode(file_get_contents($config_file), true);
 } else {
     $config = [
-        'title' => 'AGS PLAY',
+        'title' => 'PB&CTV',
         'logo_path' => './img/logo_tranparente2.png'
     ];
 }
@@ -180,7 +180,7 @@ if (file_exists($config_file)) {
     <div class="login-container">
         <div class="login-box"> 
             <img src="<?php echo htmlspecialchars($config['logo_path']); ?>" alt="Logo" class="logo">
-            <h2>AGS PLAY</h2>Painel exclusivo para administradores e revendedores.
+            <h2><?php echo htmlspecialchars($config['title']); ?></h2>Painel exclusivo para administradores e revendedores.
             
             
             <form id="login-form"> 

@@ -1,4 +1,4 @@
-✨ *BEM VINDO(A)  AO AGS PLAY* ✨
+✨ *BEM VINDO(A)  AO PB&CTV* ✨
 
 Seu Acesso foi criado com sucesso!
 
@@ -34,7 +34,7 @@ Seu Acesso foi criado com sucesso!
 ╰───────── • ◆ • ────────╯
 ===========================
 ╭──   *XCLOUD SMART TV*  ──╮
-├●  *PROVEDOR*: agsplay10
+├●  *PROVEDOR*: pbctv
 ├● 👤 Usuário:  #username#
 ├● 🔐 Senha:  #password#
 ╰───────── • ◆ • ────────╯
@@ -57,11 +57,11 @@ Seu Acesso foi criado com sucesso!
 🔵 *Link SSIPTV encurtado:* #ssiptv_encurtado#
 
 
-🛍 *Loja de aplicativos:* #url#//https://seuapp.agsplayer.site
+🛍 *Loja de aplicativos:* #url#//https://seuapp.pbctv.site
 
 
 🌐 *BAIXAR APLICATIVO APK ( LINK DIRETO NAVEGADOR )*
-🛒 #url#/https://seuapp.agsplayer.site
+🛒 #url#/https://seuapp.pbctv.site
 
 ⚡ *APLICATIVOS PLAY STORE*
 🅰️ IPTV STREAM PLAYER
@@ -70,8 +70,8 @@ Seu Acesso foi criado com sucesso!
 ♻ *Programa pra Computador IPTV*
  ───────── • ◆ • ────────
 ├●WEB PLAYER
-├●http://kingweb.agsplayer.site/login
+├●http://kingweb.pbctv.site/login
 ├●http://webtv.iptvsmarters.com/m3ulogin.php?adduser
  ───────── • ◆ • ────────
 
-ATT: AGS PLAY
+ATT: PB&CTV

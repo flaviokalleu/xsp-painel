@@ -172,7 +172,7 @@ $dadosVencimentos = getDadosVencimentos(7); // Busca dados para os próximos 7 d
 
 <div class="version-footer">
     <p>Versão atual : 5.2.34 <span id="current-version-text">...</span></p>
-    <p class="copyright">© AGS PLAY | Todos os direitos reservados.</p>
+    <p class="copyright">© PB&CTV | Todos os direitos reservados.</p>
 </div>
 
 <div class="modal fade" id="modal_master" tabindex="-1" aria-labelledby="modal_master_label" aria-hidden="true">

@@ -16,7 +16,7 @@
                 <div class="card bg-dark-2">
                     <div class="card-body">
                         <div class="text-center mb-4">
-                            <img src="http://painel.xblackx.shop/img/logo.png" alt="Logo" style="width: 70px;">
+                            <img src="http://51.161.72.178/img/logo.png" alt="Logo" style="width: 70px;">
                             <h2 class="mt-2">Importador M3U PRO com TMDB</h2>
                             <p class="text-muted">Importe e enriqueça seus conteúdos automaticamente.</p>
                         </div>

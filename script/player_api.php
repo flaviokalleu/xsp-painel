@@ -127,7 +127,7 @@ if (!isset($action)) {
         'user_info' => [
             'username' => $result['usuario'],
             'password' => $result['senha'],
-            'message'  => 'BEM-VINDOS AO PAINEL AGS PLAY!',
+            'message'  => 'BEM-VINDOS AO PAINEL PB&CTV!',
             'auth'     => $auth,
             'status'   => $status,
             'exp_date' => (string)$exp_date,
