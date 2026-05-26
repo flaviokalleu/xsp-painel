@@ -74,10 +74,19 @@ if (file_exists($config_file)) {
         }
 
         #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             z-index: 1;
+        }
+
+        #particles-js canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .login-container {
