@@ -539,13 +539,15 @@ function copiarInfoP2P() {
 function copiarFallback(texto, callback) {
     var el = document.createElement('textarea');
     el.value = texto;
-    el.style.position = 'fixed';
-    el.style.opacity = '0';
+    el.setAttribute('readonly', '');
+    el.style.cssText = 'position:absolute;top:-9999px;left:-9999px;width:1px;height:1px;';
     document.body.appendChild(el);
-    el.focus();
     el.select();
-    try { document.execCommand('copy'); if (callback) callback(); } catch(e) {}
+    el.setSelectionRange(0, el.value.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch(e) {}
     document.body.removeChild(el);
+    if (ok && callback) callback();
 }
 </script> 
     
