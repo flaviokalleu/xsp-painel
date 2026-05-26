@@ -302,6 +302,7 @@ services:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
       retries: 20
+    ports: ["3306:3306"]
     networks: [db_net]
 
 volumes:
@@ -384,6 +385,13 @@ echo "  ${YEL}Licença:${NC}"
 echo "    KEY:        $LICENSE_KEY"
 echo "    Expira em:  ${EXPIRES_AT:0:10}"
 echo "    Instalação: $INSTALLATION_ID"
+echo
+echo "  ${YEL}Banco de dados MySQL (para integração com robô):${NC}"
+echo "    Host:       $(hostname -I | awk '{print $1}')"
+echo "    Porta:      3306"
+echo "    Banco:      xsp_panel"
+echo "    Usuário:    xsp"
+echo "    Senha:      ${DB_PASS}"
 echo
 echo "  ${YEL}Para HTTPS com Let's Encrypt:${NC}"
 echo "    apt install -y certbot && certbot certonly --standalone -d $PANEL_DOMAIN --email $ADMIN_EMAIL"
