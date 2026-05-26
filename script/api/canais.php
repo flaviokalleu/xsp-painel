@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once('./controles/db.php');
 require_once('./controles/canais.php');
 require_once('./controles/checkLogout.php');

@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // A LÓGICA PHP VEM PRIMEIRO, ANTES DE QUALQUER HTML
 require_once("chatbot_integrado_funcoes.php");
 

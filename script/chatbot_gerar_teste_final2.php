@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 // chatbot_gerar_teste_final.php
 // Versão final e 100% integrada com as funções do seu painel.
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 header('Content-Type: application/json');
 
 require_once('./api/controles/db.php');

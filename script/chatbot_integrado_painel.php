@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // Garante que os arquivos sejam encontrados, pois agora temos certeza que estão na mesma pasta.
 require_once(__DIR__ . "/menu.php");
 require_once(__DIR__ . "/chatbot_integrado_funcoes.php");

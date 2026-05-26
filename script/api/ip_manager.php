@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 // api/ip_manager.php
 header('Content-Type: application/json');
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once('./controles/db.php');
 
 // Apenas administradores podem gerir IPs

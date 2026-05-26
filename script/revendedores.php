@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // Verifica se a sessão está iniciada e se a variável de sessão existe e tem o valor desejado
 if (isset($_SESSION['plano_admin']) && $_SESSION['plano_admin'] == 1) {

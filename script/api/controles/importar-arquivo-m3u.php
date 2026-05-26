@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 set_time_limit(0);
 require_once('db.php');
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 function executarConsulta($conexao, $query, $parametros) {
     $stmt = $conexao->prepare($query);

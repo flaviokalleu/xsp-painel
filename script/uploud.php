@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // Verifica se a sessão está iniciada e se a variável de sessão existe e tem o valor desejado
 if (isset($_SESSION['nivel_admin']) && $_SESSION['nivel_admin'] == 0) {

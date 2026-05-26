@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 // Inclua seu arquivo de conexão e verificação de login
 require_once('api/controles/db.php');
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // Conectar ao banco de dados
 $conn = conectar_bd();

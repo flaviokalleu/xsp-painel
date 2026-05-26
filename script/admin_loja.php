@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 if (!isset($_SESSION['nivel_admin']) || $_SESSION['nivel_admin'] != 1) { die("Acesso negado."); }
 require_once("menu.php");
 require_once("./api/controles/db.php");

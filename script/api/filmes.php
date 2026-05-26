@@ -1,5 +1,5 @@
-<?php
-session_start();
+ï»¿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once('./controles/db.php');
 require_once('./controles/filmes.php');
 require_once('./controles/checkLogout.php');
@@ -28,7 +28,7 @@ if (isset($_POST['editar_filmes'])) {
     }else {
         $resposta = [
             'title' => 'Erro!',
-            'msg' => 'Funçao nao encontrada!',
+            'msg' => 'Funï¿½ao nao encontrada!',
             'icon' => 'error'
         ];
         echo json_encode($resposta);
@@ -76,7 +76,7 @@ if (isset($_POST['confirme_editar_filmes'])) {
 
         $resposta = [
             'title' => 'Erro!',
-            'msg' => 'Funçao nao encontrada!',
+            'msg' => 'Funï¿½ao nao encontrada!',
             'icon' => 'error'
         ];
         echo json_encode($resposta);
@@ -104,7 +104,7 @@ if (isset($_POST['delete_filmes'])) {
     }else {
         $resposta = [
             'title' => 'Erro!',
-            'msg' => 'Funçao nao encontrada!',
+            'msg' => 'Funï¿½ao nao encontrada!',
             'icon' => 'error'
         ];
         echo json_encode($resposta);
@@ -134,7 +134,7 @@ if (isset($_POST['confirme_delete_filmes'])) {
 
         $resposta = [
             'title' => 'Erro!',
-            'msg' => 'Funçao nao encontrada!',
+            'msg' => 'Funï¿½ao nao encontrada!',
             'icon' => 'error'
         ];
         echo json_encode($resposta);
@@ -162,7 +162,7 @@ if (isset($_POST['adicionar_filmes'])) {
     }else {
         $resposta = [
             'title' => 'Erro!',
-            'msg' => 'Funçao nao encontrada!',
+            'msg' => 'Funï¿½ao nao encontrada!',
             'icon' => 'error'
         ];
         echo json_encode($resposta);
@@ -195,7 +195,7 @@ if (isset($_POST['confirme_adicionar_filmes'])) {
         if (!$confirme_adicionar_filmes){
             $resposta = [
                 'title' => 'Erro!',
-                'msg' => 'Erro na funçao mudar servidor.',
+                'msg' => 'Erro na funï¿½ao mudar servidor.',
                 'icon' => 'error'
             ];
             echo json_encode($resposta);
@@ -208,7 +208,7 @@ if (isset($_POST['confirme_adicionar_filmes'])) {
 
         $resposta = [
             'title' => 'Erro!',
-            'msg' => 'Funçao nao encontrada!',
+            'msg' => 'Funï¿½ao nao encontrada!',
             'icon' => 'error'
         ];
         echo json_encode($resposta);

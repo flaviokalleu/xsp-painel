@@ -1,10 +1,10 @@
-<?php
+﻿<?php
 // ======================================================================
 //   GERENCIADOR DE BACKUP E RESTAURAÇÃO v2.2
 //   Corrigido: Adicionado desativador de Foreign Key Checks no arquivo
 //   de backup para resolver erros de restauração (Error 1451).
 // ======================================================================
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 if (empty($_SESSION['logged_in_fxtream'])) {
     header('Location: ./index.php');
     exit();

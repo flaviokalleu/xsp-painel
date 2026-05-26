@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Inicia a sessão para verificar se o usuário já está logado
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // Se o usuário já estiver logado, redireciona para o dashboard
 if (isset($_SESSION['logged_in_fxtream']) && $_SESSION['logged_in_fxtream'] === true) {

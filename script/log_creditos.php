@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ================================================================================
 |             PÁGINA DE HISTÓRICO DE CRÉDITOS (log_creditos.php)                |
@@ -7,7 +7,7 @@
 ================================================================================
 */
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // Verificação de sessão real do painel
 if (empty($_SESSION['admin_id'])) {
     // Se não estiver logado, pode redirecionar ou mostrar erro

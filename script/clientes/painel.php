@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // Verifica se o usuário está logado, redireciona se não estiver
 if (!isset($_SESSION['username'])) {

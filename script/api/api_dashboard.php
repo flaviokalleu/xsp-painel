@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 ob_start();
 
 header('Content-Type: application/json');
@@ -7,7 +7,7 @@ header('Connection: close');
 ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 date_default_timezone_set('America/Sao_Paulo');
 

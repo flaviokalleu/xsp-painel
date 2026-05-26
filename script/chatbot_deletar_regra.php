@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once("chatbot_integrado_funcoes.php"); // Inclui as funções do chatbot
 
 if (!isset($_SESSION['admin_id'])) {

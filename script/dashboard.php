@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // É crucial que a conexão com o banco de dados e as funções de busca sejam carregadas
 require_once('./api/controles/db.php');
 require_once('./api/controles/dashboard.php'); // Onde estão as funções Dashboard(), testes(), etc.

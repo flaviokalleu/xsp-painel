@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once("menu.php");
 ?>
 <div class="container-fluid py-4">

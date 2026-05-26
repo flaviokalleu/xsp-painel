@@ -1,8 +1,8 @@
-<?php
+ï»¿<?php
 // /api/chatbot_office_api.php
-// VERS0‡1O FINAL COM MENSAGEM PERSONALIZADA
+// VERSï¿½0ï¿½1O FINAL COM MENSAGEM PERSONALIZADA
 
-session_start(); 
+if (session_status() === PHP_SESSION_NONE) { session_start(); } 
 header('Content-Type: application/json');
 
 require_once(__DIR__ . '/../chatbot_integrado_funcoes.php');
@@ -19,10 +19,10 @@ function responder($mensagem = "") {
 }
 
 $key = $_GET['key'] ?? '';
-if (empty($key)) { responder("Identificador inv¨¢lido."); }
+if (empty($key)) { responder("Identificador invï¿½ï¿½lido."); }
 
 $admin = getUserByChatbotToken($key);
-if (!$admin) { responder("Identificador n0Š0o encontrado."); }
+if (!$admin) { responder("Identificador nï¿½0ï¿½0o encontrado."); }
 
 $_SESSION['admin_id'] = $admin['id'];
 $_SESSION['token'] = $admin['token'];

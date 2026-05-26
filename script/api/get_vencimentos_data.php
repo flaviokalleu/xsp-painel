@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 header('Content-Type: application/json');
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // VERIFICAÇÃO CORRIGIDA: Usando a variável de sessão correta do seu sistema
 if (!isset($_SESSION['logged_in_fxtream']) || $_SESSION['logged_in_fxtream'] !== true) {

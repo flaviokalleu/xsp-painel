@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ================================================================================
 |                  LÓGICA DO SERVIDOR (api_revendedores.php)                   |
@@ -8,7 +8,7 @@
 
 header('Content-Type: application/json');
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 // Verificação de sessão real do painel
 if (empty($_SESSION['admin_id'])) {

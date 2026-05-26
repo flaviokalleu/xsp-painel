@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // --- CAMINHO CORRIGIDO AQUI ---
 // O correto é apenas um '../' para subir da pasta 'clientes_p2p' para a raiz.
 require_once '../api/controles/db.php';

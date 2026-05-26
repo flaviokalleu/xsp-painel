@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once('./controles/db.php');
 require_once('./controles/clientes.php'); // Certifique-se que este ficheiro existe e está atualizado
 require_once('./controles/checkLogout.php');

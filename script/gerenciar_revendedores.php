@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ================================================================================
 |             PÁGINA DE GERENCIAMENTO (gerenciar_revendedores.php)             |
@@ -6,7 +6,7 @@
 ================================================================================
 */
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // Descomente e ajuste a verificação de sessão do seu painel
 // if (empty($_SESSION['logged_in_fxtream'])) {
 //     header('Location: ./index.php');

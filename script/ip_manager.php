@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // Apenas Admins podem aceder a esta página
 if (!isset($_SESSION['nivel_admin']) || $_SESSION['nivel_admin'] != 1) {
     header("Location: dashboard.php"); // Redireciona se não for admin
