@@ -60,7 +60,7 @@ $chatbot_url = getChatbotUrl($admin_id);
         <p>Use a URL abaixo no campo "Server URL" do seu aplicativo de resposta automática.</p>
         <div class="input-group mb-3">
             <input type="text" class="form-control" value="<?php echo htmlspecialchars($chatbot_url); ?>" readonly>
-            <button class="btn btn-primary" onclick="navigator.clipboard.writeText('<?php echo htmlspecialchars($chatbot_url); ?>')">Copiar</button>
+            <button class="btn btn-primary" onclick="xspCopiar('<?php echo htmlspecialchars($chatbot_url); ?>')">Copiar</button>
         </div>
         <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#installModal"><i class="fas fa-info-circle"></i> Ver Passo a Passo da Instalação</button>
     </div>

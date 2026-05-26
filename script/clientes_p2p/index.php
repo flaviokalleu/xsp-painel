@@ -96,14 +96,12 @@ if ($conexao) {
     function copyToClipboard() {
         const messageElement = document.getElementById('renewal-message');
         const textToCopy = messageElement.innerText;
-        navigator.clipboard.writeText(textToCopy).then(() => {
+        xspCopiar(textToCopy, () => {
             const copyButton = document.querySelector('.renewal-message-box .btn-primary');
             copyButton.innerHTML = '<i class="fas fa-check"></i> Copiado!';
             setTimeout(() => {
                 copyButton.innerHTML = '<i class="fas fa-copy"></i> Copiar Mensagem';
-            }, 2000); // Volta ao texto original após 2 segundos
-        }).catch(err => {
-            console.error('Erro ao copiar texto: ', err);
+            }, 2000);
         });
     }
 

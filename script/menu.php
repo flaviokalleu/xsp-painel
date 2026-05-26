@@ -537,6 +537,14 @@ function copiarInfoP2P() {
         copiarFallback(textoParaCopiar, onCopiado);
     }
 }
+function xspCopiar(texto, onCopiado) {
+    if (!onCopiado) onCopiado = function() { if (typeof SweetAlert3 !== 'undefined') SweetAlert3('Copiado!', 'success'); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(onCopiado).catch(function() { copiarFallback(texto, onCopiado); });
+    } else {
+        copiarFallback(texto, onCopiado);
+    }
+}
 function copiarFallback(texto, callback) {
     // Precisa inserir dentro do modal aberto pois Bootstrap tem focus trap
     var container = document.querySelector('.modal.show .modal-body') || document.body;

@@ -297,7 +297,7 @@ function confirme_renovar_cliente($id, $meses)
                 $whatsapp_link = "<a href='https://wa.me/$numero_wa?text=".urlencode($mensagem)."' target='_blank' class='btn btn-success btn-sm mt-2 ms-2'><i class='fab fa-whatsapp'></i> Enviar WhatsApp</a>";
             }
             $html_msg = '<div id="msg-renovacao" style="text-align: left; white-space:pre-wrap;background:#f8f9fa;padding:15px;border-radius:5px; border:1px solid #dee2e6; color: #212529;">'.htmlspecialchars($mensagem).'</div>';
-            $copy_button = '<button type="button" onclick="navigator.clipboard.writeText(document.getElementById(\'msg-renovacao\').textContent); SweetAlert3(\'Copiado!\', \'success\')" class="btn btn-primary btn-sm mt-2">Copiar Mensagem</button>';
+            $copy_button = '<button type="button" onclick="xspCopiar(document.getElementById(\'msg-renovacao\').textContent)" class="btn btn-primary btn-sm mt-2">Copiar Mensagem</button>';
 
             return ['title' => "Sucesso!", 'msg' => $html_msg . $copy_button . $whatsapp_link, 'icon' => "success", 'data_table' => 'atualizar'];
 

@@ -111,11 +111,8 @@ require_once("menu.php");
         const textToCopy = element.getAttribute('data-copy-text');
 
         if (textToCopy) {
-            navigator.clipboard.writeText(textToCopy).then(() => {
+            xspCopiar(textToCopy, () => {
                 SweetAlert3('Copiado para a área de transferência!', 'success');
-            }).catch(err => {
-                console.error('Falha ao copiar texto: ', err);
-                SweetAlert3('Erro ao copiar.', 'error');
             });
         }
     }

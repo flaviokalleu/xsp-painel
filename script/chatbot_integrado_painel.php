@@ -359,22 +359,16 @@ function copyUrl() {
     const copyBtn = document.getElementById('copyUrlBtn');
     const copyBtnText = document.getElementById('copyBtnText');
     
-    // Seleciona e copia o texto
-    urlInput.select();
-    urlInput.setSelectionRange(0, 99999); // Para dispositivos móveis
-    navigator.clipboard.writeText(urlInput.value);
-
-    // Feedback visual
-    copyBtnText.innerText = 'Copiado!';
-    copyBtn.classList.remove('btn-primary');
-    copyBtn.classList.add('btn-success');
-    
-    // Volta ao normal após 2 segundos
-    setTimeout(() => {
-        copyBtnText.innerText = 'Copiar';
-        copyBtn.classList.remove('btn-success');
-        copyBtn.classList.add('btn-primary');
-    }, 2000);
+    xspCopiar(urlInput.value, () => {
+        copyBtnText.innerText = 'Copiado!';
+        copyBtn.classList.remove('btn-primary');
+        copyBtn.classList.add('btn-success');
+        setTimeout(() => {
+            copyBtnText.innerText = 'Copiar';
+            copyBtn.classList.remove('btn-success');
+            copyBtn.classList.add('btn-primary');
+        }, 2000);
+    });
 }
 </script>
 

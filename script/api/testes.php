@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             $texto_para_copiar = htmlspecialchars($mensagem_final, ENT_QUOTES, 'UTF-8');
             
-            $modal_footer = "<button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>" . "<button type='button' class='btn btn-success' onclick='navigator.clipboard.writeText(`{$texto_para_copiar}`).then(() => SweetAlert3(\"Dados copiados!\", \"success\"))'><i class='fab fa-whatsapp'></i> Copiar</button>";
+            $modal_footer = "<button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>" . "<button type='button' class='btn btn-success' onclick='xspCopiar(`{$texto_para_copiar}`, () => SweetAlert3(\"Dados copiados!\", \"success\"))'><i class='fab fa-whatsapp'></i> Copiar</button>";
             
             echo json_encode([ 
                 'modal_titulo' => 'Teste Rápido Criado (' . $usuario_teste . ')', 
