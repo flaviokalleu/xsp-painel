@@ -27,7 +27,9 @@ function regenerateSessionSafely() {
     $now = time();
     $lastRegenerated = (int)($_SESSION['last_regenerated'] ?? 0);
     if ($lastRegenerated === 0 || ($now - $lastRegenerated) > 300) {
-        session_regenerate_id(true);
+        // false = não deleta a sessão antiga; evita race condition com requests AJAX simultâneos
+        // que ainda carregam o ID antigo e ficam com sessão vazia → "Sessão inválida"
+        session_regenerate_id(false);
         $_SESSION['last_regenerated'] = $now;
     }
 }

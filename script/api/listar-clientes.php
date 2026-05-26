@@ -125,19 +125,25 @@ if (isset($_GET['listar_revendedores'])) {
 
 if (isset($_GET['info_admin'])) {
     header('Content-Type: application/json; charset=utf-8');
-    $conexao = conectar_bd();
     $admin_id = $_SESSION['admin_id'] ?? null;
-    $token = $_SESSION['token'] ?? '';
-    $sql = "SELECT *, p.nome as tipo_admin FROM admin a LEFT JOIN planos_admin p ON p.id = a.plano WHERE a.id = :admin_id AND a.token = :token";
+    // Valida sessão pela presença do admin_id (autenticação já garantida pelo checkLogout).
+    // A verificação por token foi removida: o token da sessão era invalidado por race condition
+    // quando session_regenerate_id rodava em paralelo com requests AJAX do dashboard.
+    if (empty($admin_id) || empty($_SESSION['logged_in_fxtream'])) {
+        echo json_encode(['icon' => 'error', 'title' => 'Erro', 'msg' => 'Sessão inválida']);
+        exit();
+    }
+    $conexao = conectar_bd();
+    $sql = "SELECT *, p.nome as tipo_admin FROM admin a LEFT JOIN planos_admin p ON p.id = a.plano WHERE a.id = :admin_id";
     $stmt = $conexao->prepare($sql);
-    $stmt->execute([':admin_id' => $admin_id, ':token' => $token]);
+    $stmt->execute([':admin_id' => $admin_id]);
     if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $creditos_finais = ($admin == 1) ? '<i class="fa-solid fa-infinity"></i>' : $creditos;
         $tipo_admin_final = ($admin == 1) ? "Administrador" : "Nivel: " . trim(strstr($tipo_admin, ':'), ': ');
         echo json_encode([ 'tipo_admin' => $tipo_admin_final, 'creditos' => $creditos_finais, 'icon' => 'success' ]);
     } else {
-        echo json_encode(['icon' => 'error', 'title' => 'Erro', 'msg' => 'Sessão inválida']);
+        echo json_encode(['icon' => 'error', 'title' => 'Erro', 'msg' => 'Admin não encontrado']);
     }
     exit();
 }
