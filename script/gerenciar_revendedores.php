@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ================================================================================
 |             PÁGINA DE GERENCIAMENTO (gerenciar_revendedores.php)             |

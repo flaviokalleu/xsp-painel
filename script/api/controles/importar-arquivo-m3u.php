@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 set_time_limit(0);
 require_once('db.php');
 if (session_status() === PHP_SESSION_NONE) { session_start(); }

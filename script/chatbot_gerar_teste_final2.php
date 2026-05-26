@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // chatbot_gerar_teste_final.php
 // Versão final e 100% integrada com as funções do seu painel.
 

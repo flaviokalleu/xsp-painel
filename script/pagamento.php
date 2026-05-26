@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once("chatbot_integrado_funcoes.php");
 require_once("vendor/autoload.php"); // Carrega o SDK do Mercado Pago

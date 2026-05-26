@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // /api/chatbot_office_api.php
 // VERS�0�1O FINAL COM MENSAGEM PERSONALIZADA
 

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // --- CAMINHO CORRIGIDO AQUI ---
 // O correto é apenas um '../' para subir da pasta 'clientes_p2p' para a raiz.

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 // Medida de segurança: Apenas o admin principal pode acessar esta página
 if (!isset($_SESSION['nivel_admin']) || $_SESSION['nivel_admin'] != 1) {

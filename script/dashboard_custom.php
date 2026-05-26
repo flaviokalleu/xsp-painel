@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Inclua seu arquivo de conexão e verificação de login
 require_once('api/controles/db.php');
 if (session_status() === PHP_SESSION_NONE) { session_start(); }

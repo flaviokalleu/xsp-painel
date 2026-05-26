@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once("menu.php"); // Inclui o seu menu e o cabeçalho da página
 require_once("./api/controles/db.php"); 

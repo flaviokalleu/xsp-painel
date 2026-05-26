@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Inicia a sessão para verificar se o usuário já está logado
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 

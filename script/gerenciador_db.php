@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // ======================================================================
 //   GERENCIADOR DE BACKUP E RESTAURAÇÃO v2.2
 //   Corrigido: Adicionado desativador de Foreign Key Checks no arquivo

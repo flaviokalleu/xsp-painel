@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Endpoint para derrubar sessões ativas.
 // Admin derruba tudo; revendedor derruba apenas sessões dos seus clientes.
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
