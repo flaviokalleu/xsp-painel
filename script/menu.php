@@ -521,17 +521,31 @@ function exibirModalP2P(titulo, mensagem) {
 
 function copiarInfoP2P() {
     var textoParaCopiar = document.getElementById('p2p-info-content').innerText;
-    navigator.clipboard.writeText(textoParaCopiar).then(() => {
-        // Usa a sua função de alerta existente, se tiver uma, ou um alert padrão.
-        // Substitua SweetAlert3 pelo nome correto da sua função de alerta, se for diferente.
+    function onCopiado() {
         if (typeof SweetAlert3 !== 'undefined') {
             SweetAlert3('Texto copiado para a área de transferência!', 'success');
         } else {
             alert('Texto copiado!');
         }
-    }).catch(err => {
-        console.error('Erro ao copiar: ', err);
-    });
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textoParaCopiar).then(onCopiado).catch(function() {
+            copiarFallback(textoParaCopiar, onCopiado);
+        });
+    } else {
+        copiarFallback(textoParaCopiar, onCopiado);
+    }
+}
+function copiarFallback(texto, callback) {
+    var el = document.createElement('textarea');
+    el.value = texto;
+    el.style.position = 'fixed';
+    el.style.opacity = '0';
+    document.body.appendChild(el);
+    el.focus();
+    el.select();
+    try { document.execCommand('copy'); if (callback) callback(); } catch(e) {}
+    document.body.removeChild(el);
 }
 </script> 
     
