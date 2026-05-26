@@ -538,17 +538,17 @@ function copiarInfoP2P() {
     }
 }
 function copiarFallback(texto, callback) {
+    // Precisa inserir dentro do modal aberto pois Bootstrap tem focus trap
+    var container = document.querySelector('.modal.show .modal-body') || document.body;
     var el = document.createElement('textarea');
     el.value = texto;
-    // NÃO colocar readonly — alguns browsers bloqueiam execCommand em readonly
-    el.style.cssText = 'position:fixed;top:0;left:0;width:2em;height:2em;padding:0;border:none;outline:none;box-shadow:none;background:transparent;';
-    document.body.appendChild(el);
+    el.style.cssText = 'position:fixed;top:0;left:0;width:2em;height:2em;padding:0;border:none;outline:none;box-shadow:none;background:transparent;opacity:0;z-index:9999;';
+    container.appendChild(el);
     el.focus();
     el.select();
     el.setSelectionRange(0, 99999);
-    var ok = false;
-    try { ok = document.execCommand('copy'); } catch(e) {}
-    document.body.removeChild(el);
+    try { document.execCommand('copy'); } catch(e) {}
+    container.removeChild(el);
     if (callback) callback();
 }
 </script> 
