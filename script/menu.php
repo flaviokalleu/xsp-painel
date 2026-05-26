@@ -528,6 +528,7 @@ function copiarInfoP2P() {
             alert('Texto copiado!');
         }
     }
+    // Tenta clipboard API (HTTPS) e cai no fallback se indisponível
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(textoParaCopiar).then(onCopiado).catch(function() {
             copiarFallback(textoParaCopiar, onCopiado);
@@ -539,15 +540,16 @@ function copiarInfoP2P() {
 function copiarFallback(texto, callback) {
     var el = document.createElement('textarea');
     el.value = texto;
-    el.setAttribute('readonly', '');
-    el.style.cssText = 'position:absolute;top:-9999px;left:-9999px;width:1px;height:1px;';
+    // NÃO colocar readonly — alguns browsers bloqueiam execCommand em readonly
+    el.style.cssText = 'position:fixed;top:0;left:0;width:2em;height:2em;padding:0;border:none;outline:none;box-shadow:none;background:transparent;';
     document.body.appendChild(el);
+    el.focus();
     el.select();
-    el.setSelectionRange(0, el.value.length);
+    el.setSelectionRange(0, 99999);
     var ok = false;
     try { ok = document.execCommand('copy'); } catch(e) {}
     document.body.removeChild(el);
-    if (ok && callback) callback();
+    if (callback) callback();
 }
 </script> 
     
