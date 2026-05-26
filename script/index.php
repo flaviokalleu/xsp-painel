@@ -62,11 +62,11 @@ if (file_exists($config_file)) {
 
         #bg-logo {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 480px;
-            max-width: 70vw;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
             opacity: 0.08;
             pointer-events: none;
             z-index: 0;
