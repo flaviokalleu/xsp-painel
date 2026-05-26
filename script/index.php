@@ -60,6 +60,19 @@ if (file_exists($config_file)) {
             overflow: hidden;
         }
 
+        #bg-logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 480px;
+            max-width: 70vw;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+        }
+
         #particles-js {
             position: absolute;
             width: 100%;
@@ -175,6 +188,7 @@ if (file_exists($config_file)) {
 
 
 
+    <img id="bg-logo" src="<?php echo htmlspecialchars($config['logo_path']); ?>" alt="">
     <div id="particles-js"></div>
 
     <div class="login-container">
