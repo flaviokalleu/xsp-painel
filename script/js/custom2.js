@@ -1,3 +1,33 @@
+// Redireciona imediatamente para login se a sessão expirar em qualquer chamada
+function xspCheckSessao(data) {
+    if (data && data.session_expired) {
+        window.location.replace('index.php');
+        return true;
+    }
+    return false;
+}
+
+// Intercepta todas as respostas jQuery AJAX
+$(document).ajaxComplete(function(event, xhr) {
+    try {
+        var r = JSON.parse(xhr.responseText);
+        xspCheckSessao(r);
+    } catch(e) {}
+});
+
+// Intercepta todas as chamadas fetch()
+(function() {
+    var _fetch = window.fetch;
+    window.fetch = function() {
+        return _fetch.apply(this, arguments).then(function(res) {
+            res.clone().json().then(function(data) {
+                xspCheckSessao(data);
+            }).catch(function() {});
+            return res;
+        });
+    };
+})();
+
 document.addEventListener("DOMContentLoaded", function() {
 
     function addOverflowAuto() {
