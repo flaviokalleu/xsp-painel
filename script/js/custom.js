@@ -32,11 +32,13 @@ async function updateinfo() {
 
 updateinfo();
 
-async function modal_master(url, parametro1, valor1) {
+async function modal_master(url, parametro1, valor1, parametro2, valor2) {
+    var postData = { [parametro1]: valor1 };
+    if (parametro2 !== undefined && valor2 !== undefined) postData[parametro2] = valor2;
     $.ajax({
         type: "POST",
         url: url,
-        data: { [parametro1]: valor1 },
+        data: postData,
         dataType: 'json',
         success: function(response) {
             if (response && response.modal_titulo) {

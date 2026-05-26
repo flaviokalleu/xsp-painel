@@ -194,7 +194,7 @@ function confirme_editar_revendedor($id, $usuario, $senha, $plano) {
 function add_creditos($id, $usuario) {
     $modal_body = '<input type="hidden" name="confirme_add_creditos" value="' . htmlspecialchars($id) . '"><label for="creditos" class="form-label">Adicionar Créditos:</label><input type="number" name="creditos" class="form-control" placeholder="Créditos" value="10"><small class="form-text text-muted">Use um valor negativo para remover créditos.</small>';
     $modal_footer = "<button type='button' class='btn btn-success' onclick='enviardados(\"modal_master_form\", \"revendedores.php\")'>Confirmar</button>";
-    return [ 'modal_header_class' => "modal-header bg-success text-white", 'modal_titulo' => "Adicionar Créditos para (" . htmlspecialchars($usuario) . ")", 'modal_body' => $modal_body, 'modal_footer' => $modal_footer ];
+    return [ 'modal_header_class' => "modal-header bg-success text-white", 'modal_titulo' => "Adicionar Créditos para (" . htmlspecialchars($usuario ?? '') . ")", 'modal_body' => $modal_body, 'modal_footer' => $modal_footer ];
 }
 
 function confirme_add_creditos($id, $addcreditos) {
