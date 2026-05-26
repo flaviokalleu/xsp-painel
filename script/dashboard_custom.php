@@ -247,40 +247,19 @@ require_once("menu.php");
                 textToCopy += cleanText + '\n';
             });
 
-            // 2. Tenta copiar o texto para a área de transferência
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    // 3. Usa SweetAlert2 para notificação de Sucesso (AGORA CENTRALIZADO)
-                    Swal.fire({
-                        title: 'Copiado!',
-                        text: 'A lista de novidades foi copiada com sucesso para a área de transferência.',
-                        icon: 'success',
-                        toast: true,
-                        // MUDANÇA AQUI: de 'top-end' para 'center'
-                        position: 'center', 
-                        showConfirmButton: false,
-                        timer: 3000,
-                        timerProgressBar: true
-                    });
-                }).catch(err => {
-                    console.error('Erro ao copiar: ', err);
-                    // 4. Usa SweetAlert2 para notificação de Erro (Já é centralizado por padrão)
-                    Swal.fire({
-                        title: 'Erro de Cópia!',
-                        text: 'Não foi possível copiar a lista. Tente selecionar o texto manualmente.',
-                        icon: 'error',
-                        confirmButtonText: 'Entendi'
-                    });
+            // 2. Copia com fallback para HTTP (sem HTTPS)
+            xspCopiar(textToCopy, () => {
+                Swal.fire({
+                    title: 'Copiado!',
+                    text: 'A lista de novidades foi copiada com sucesso para a área de transferência.',
+                    icon: 'success',
+                    toast: true,
+                    position: 'center',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true
                 });
-            } else {
-                // Notificação de erro para navegadores antigos (Já é centralizado por padrão)
-                 Swal.fire({
-                    title: 'Navegador Antigo',
-                    text: 'A função de cópia automática não é suportada. Por favor, selecione e copie o texto manualmente.',
-                    icon: 'warning',
-                    confirmButtonText: 'Ok'
-                });
-            }
+            });
         }
     </script>
 </body>
