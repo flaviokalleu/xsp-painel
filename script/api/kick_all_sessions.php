@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once($_SERVER['DOCUMENT_ROOT'] . '/api/controles/db.php');
 header('Content-Type: application/json; charset=utf-8');
 
-$nivel = $_SESSION['nivel_admin'] ?? -1;
+$nivel = (int)($_SESSION['nivel_admin'] ?? -1);
 if ($nivel !== 1 && $nivel !== 0) {
     http_response_code(403);
     echo json_encode(['success' => false, 'message' => 'Não autorizado.']);
