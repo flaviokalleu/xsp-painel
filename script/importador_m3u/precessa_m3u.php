@@ -1,6 +1,5 @@
 <?php
-// Arquivo: processar.php (Versão Final Corrigida)
-// Inclui: Leitura de URL com cURL, seleção de categorias e relatório final.
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -15,15 +14,15 @@ $category_name_column = 'nome';
 $table_config = [
     'live' => [
         'table_name' => 'streams',
-        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link']
+        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link', 'admin_id' => 'admin_id']
     ],
     'movie' => [
         'table_name' => 'streams',
-        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'actors' => 'actors', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path']
+        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'actors' => 'actors', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path', 'admin_id' => 'admin_id']
     ],
     'series' => [
         'table_name' => 'series',
-        'columns' => ['name' => 'name', 'icon' => 'cover', 'cat_id' => 'category_id', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'cast' => 'cast', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path']
+        'columns' => ['name' => 'name', 'icon' => 'cover', 'cat_id' => 'category_id', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'cast' => 'cast', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path', 'admin_id' => 'admin_id']
     ]
 ];
 
@@ -39,7 +38,10 @@ require_once(__DIR__ . '/TMDB.php');
 $temp_dir = __DIR__ . '/temp';
 $chunk_size = 20; // Itens a processar por vez
 if (!is_dir($temp_dir)) {
-    mkdir($temp_dir, 0755, true);
+    mkdir($temp_dir, 0775, true);
+}
+if (!is_writable($temp_dir)) {
+    chmod($temp_dir, 0775);
 }
 
 // =================================================================
@@ -248,7 +250,7 @@ switch ($step) {
                     continue;
                 }
                 
-                $dataToInsert = ['name' => $item['name']];
+                $dataToInsert = ['name' => $item['name'], 'admin_id' => $_SESSION['admin_id'] ?? 1];
                 $release_year = '';
 
                 if ($content_type === 'live') {
