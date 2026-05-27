@@ -14,15 +14,15 @@ $category_name_column = 'nome';
 $table_config = [
     'live' => [
         'table_name' => 'streams',
-        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link', 'admin_id' => 'admin_id']
+        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link']
     ],
     'movie' => [
         'table_name' => 'streams',
-        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'actors' => 'actors', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path', 'admin_id' => 'admin_id']
+        'columns' => ['name' => 'name', 'icon' => 'stream_icon', 'cat_id' => 'category_id', 'type' => 'stream_type', 'url' => 'link', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'actors' => 'actors', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path']
     ],
     'series' => [
         'table_name' => 'series',
-        'columns' => ['name' => 'name', 'icon' => 'cover', 'cat_id' => 'category_id', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'cast' => 'cast', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path', 'admin_id' => 'admin_id']
+        'columns' => ['name' => 'name', 'icon' => 'cover', 'cat_id' => 'category_id', 'plot' => 'plot', 'rating' => 'rating', 'rating_5based' => 'rating_5based', 'genre' => 'genre', 'director' => 'director', 'cast' => 'cast', 'releaseDate' => 'releaseDate', 'backdrop' => 'backdrop_path']
     ]
 ];
 
@@ -106,8 +106,9 @@ function getOrCreateCategory($pdo, $categoryName, $categoryType) {
     if ($result) {
         return $result['id'];
     } else {
-        $stmt = $pdo->prepare("INSERT INTO `{$categories_table_name}` (`{$category_name_column}`, `type`) VALUES (?, ?)");
-        $stmt->execute([$categoryName, $xtream_db_type]);
+        $admin_id = $_SESSION['admin_id'] ?? 1;
+        $stmt = $pdo->prepare("INSERT INTO `{$categories_table_name}` (`{$category_name_column}`, `type`, `admin_id`) VALUES (?, ?, ?)");
+        $stmt->execute([$categoryName, $xtream_db_type, $admin_id]);
         return $pdo->lastInsertId();
     }
 }
