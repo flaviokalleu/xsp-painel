@@ -261,6 +261,8 @@ throw new Error("Resposta inesperada do servidor. O PHP pode ter erros. Conteúd
 
 const data = await response.json();
 
+if (data.error) throw new Error('API: ' + data.error);
+
 // 1. Atualiza os contadores
 document.getElementById('total-online').innerText = data.online_count || 0;
 document.getElementById('clientes-multiplas-conexoes').innerText = data.multi_connection_count || 0;
@@ -268,8 +270,10 @@ document.getElementById('clientes-multiplas-conexoes').innerText = data.multi_co
 const tabelaCorpo = document.getElementById('tabela-atividade');
 tabelaCorpo.innerHTML = '';
 
+const activity = Array.isArray(data.activity) ? data.activity : [];
+
 // 2. Itera sobre os dados e cria as linhas da tabela
-data.activity.forEach(item => {
+activity.forEach(item => {
 const sessionId = item.id;
 
 let nomeCanal = item.canal_atual || 'N/A';
