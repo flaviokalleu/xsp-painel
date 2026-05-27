@@ -91,14 +91,14 @@ $categorias = $pdo->query("SELECT id, nome FROM categoria ORDER BY nome")->fetch
                             <tr id="canal-row-<?= htmlspecialchars($canal['id']) ?>">
                                 <td><input type="checkbox" class="form-check-input row-checkbox" data-id="<?= htmlspecialchars($canal['id']) ?>"></td>
                                 <td class="mobile-hide"><?= htmlspecialchars($canal['id']) ?></td>
-                                <td><img src="<?= htmlspecialchars($canal['stream_icon']) ?>" class="logo-img" alt="Logo"></td>
-                                <td><?= htmlspecialchars($canal['name']) ?></td>
+                                <td><img src="<?= htmlspecialchars($canal['stream_icon'] ?? '') ?>" class="logo-img" alt="Logo"></td>
+                                <td><?= htmlspecialchars($canal['name'] ?? '') ?></td>
                                 <td class="mobile-hide"><span class="badge bg-primary"><?= htmlspecialchars($canal['category_name'] ?? 'N/A') ?></span></td>
-                                <td class="mobile-hide"><?= htmlspecialchars($canal['epg_channel_id']) ?: 'N/A' ?></td>
+                                <td class="mobile-hide"><?= htmlspecialchars($canal['epg_channel_id'] ?? '') ?: 'N/A' ?></td>
                                 <td class="text-center">
-                                    <a href="canal_editar.php?id=<?= htmlspecialchars($canal['id']) ?>" class="action-btn btn-edit" title="Editar"><i class="fas fa-pencil-alt"></i></a>
-                                    <a onclick="alert('URL do Stream:\n<?= htmlspecialchars($canal['link']) ?>')" class="action-btn btn-link" title="Ver Link"><i class="fas fa-link"></i></a>
-                                    <button onclick="deleteCanal(<?= htmlspecialchars($canal['id']) ?>, '<?= htmlspecialchars(addslashes($canal['name'])) ?>')" class="action-btn btn-delete" title="Excluir"><i class="fas fa-trash"></i></button>
+                                    <a href="canal_editar.php?id=<?= htmlspecialchars($canal['id'] ?? '') ?>" class="action-btn btn-edit" title="Editar"><i class="fas fa-pencil-alt"></i></a>
+                                    <a onclick="alert('URL do Stream:\n<?= htmlspecialchars($canal['link'] ?? '') ?>')" class="action-btn btn-link" title="Ver Link"><i class="fas fa-link"></i></a>
+                                    <button onclick="deleteCanal(<?= htmlspecialchars($canal['id'] ?? '') ?>, '<?= htmlspecialchars(addslashes($canal['name'] ?? '')) ?>')" class="action-btn btn-delete" title="Excluir"><i class="fas fa-trash"></i></button>
                                 </td>
                             </tr>
                             <?php endforeach; endif; ?>
