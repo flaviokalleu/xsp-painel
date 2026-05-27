@@ -1,6 +1,5 @@
 <?php
-// ARQUIVO: /gerenciador/ajax/canais_excluir_massa.php
-
+ob_start();
 header('Content-Type: application/json');
 require_once('../../api/controles/db.php');
 $pdo = conectar_bd();
