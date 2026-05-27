@@ -38,7 +38,10 @@ require_once(__DIR__ . '/TMDB.php');
 $temp_dir = __DIR__ . '/temp';
 $chunk_size = 20; // Itens a processar por vez
 if (!is_dir($temp_dir)) {
-    mkdir($temp_dir, 0755, true);
+    mkdir($temp_dir, 0775, true);
+}
+if (!is_writable($temp_dir)) {
+    chmod($temp_dir, 0775);
 }
 
 // =================================================================
