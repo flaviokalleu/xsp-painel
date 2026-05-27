@@ -306,6 +306,12 @@ if ($location && $dados && $tipo_link !== "link_direto2") {
         exit();
     }
 
+    // Para live, redireciona direto: get_headers() em stream ao vivo bloqueia indefinidamente
+    if ($type_url === 'live') {
+        header("Location: $url");
+        exit();
+    }
+
     $location2 = json_decode(getHeadersAsJson($url), true);
     if ($location2) {
         if (isset($location2["location"])) {
