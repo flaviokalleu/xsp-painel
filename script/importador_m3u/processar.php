@@ -99,7 +99,7 @@ function detectContentType($url) {
  */
 function getOrCreateCategory($pdo, $categoryName, $categoryType) {
     global $categories_table_name, $category_name_column;
-    $xtream_db_type = ($categoryType === 'series') ? 'series' : 'movie';
+    $xtream_db_type = match($categoryType) { 'series' => 'series', 'live' => 'live', default => 'movie' };
     $stmt = $pdo->prepare("SELECT id FROM `{$categories_table_name}` WHERE `{$category_name_column}` = ? AND `type` = ?");
     $stmt->execute([$categoryName, $xtream_db_type]);
     $result = $stmt->fetch();
