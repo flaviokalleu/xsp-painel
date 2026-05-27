@@ -21,7 +21,7 @@ function sendFinalResponse($conn, $response) {
 }
 
 // Verifica sessão — apenas admin (1) ou revendedor (0) podem acessar
-$nivel = $_SESSION['nivel_admin'] ?? -1;
+$nivel = (int)($_SESSION['nivel_admin'] ?? -1);
 if ($nivel !== 1 && $nivel !== 0) {
     sendFinalResponse(null, ['error' => 'unauthorized']);
 }
