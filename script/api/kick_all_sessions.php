@@ -16,19 +16,48 @@ try {
     $conexao = conectar_bd();
 
     if ($nivel === 0) {
-        // Revendedor: deleta apenas conexões dos seus clientes
         $admin_id = (int)($_SESSION['admin_id'] ?? 0);
+
+        // Coleta IPs antes de deletar para banir temporariamente
+        $stmt_ips = $conexao->prepare(
+            "SELECT DISTINCT con.ip FROM conexoes con
+             INNER JOIN clientes cl ON cl.usuario = con.usuario AND cl.admin_id = :admin_id"
+        );
+        $stmt_ips->bindParam(':admin_id', $admin_id, PDO::PARAM_INT);
+        $stmt_ips->execute();
+        $ips = $stmt_ips->fetchAll(PDO::FETCH_COLUMN);
+
         $query = "DELETE con FROM conexoes con
                   INNER JOIN clientes cl ON cl.usuario = con.usuario AND cl.admin_id = :admin_id";
         $stmt = $conexao->prepare($query);
         $stmt->bindParam(':admin_id', $admin_id, PDO::PARAM_INT);
     } else {
+        // Coleta IPs antes de deletar
+        $stmt_ips = $conexao->prepare("SELECT DISTINCT ip FROM conexoes");
+        $stmt_ips->execute();
+        $ips = $stmt_ips->fetchAll(PDO::FETCH_COLUMN);
+
         $query = "DELETE FROM conexoes";
         $stmt  = $conexao->prepare($query);
     }
 
     $stmt->execute();
     $rows = $stmt->rowCount();
+
+    // Bane todos os IPs por 2 minutos para impedir reconexão imediata
+    if (!empty($ips)) {
+        $stmt_ban = $conexao->prepare(
+            "INSERT INTO banned_ips (ip_address, reason, ban_expires)
+             VALUES (:ip, 'Derrubada em massa', DATE_ADD(NOW(), INTERVAL 2 MINUTE))
+             ON DUPLICATE KEY UPDATE
+                 reason     = 'Derrubada em massa',
+                 ban_expires = DATE_ADD(NOW(), INTERVAL 2 MINUTE)"
+        );
+        foreach ($ips as $ip) {
+            $stmt_ban->bindParam(':ip', $ip);
+            $stmt_ban->execute();
+        }
+    }
 
     $message = ($rows > 0)
         ? "Todas as {$rows} sessões foram derrubadas com sucesso."
