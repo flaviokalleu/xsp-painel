@@ -100,6 +100,7 @@
         let totalItems = 0;
         let processedItems = 0;
         let taskId = '';
+        let cacheId = '';
 
         function log(message, type = 'info') {
             const time = new Date().toLocaleTimeString();
@@ -120,6 +121,7 @@
                 const data = await response.json();
                 if (data.success) {
                     log('Análise concluída. Mostrando categorias.');
+                    cacheId = data.cache_id || '';
                     displayCategories(data.categories);
                     urlInputArea.style.display = 'none';
                     categorySelectionArea.style.display = 'block';
@@ -161,6 +163,7 @@
             const formData = new FormData();
             formData.append('m3u_url', m3uUrlInput.value);
             formData.append('selected_categories', JSON.stringify(selectedCategories));
+            formData.append('cache_id', cacheId);
             
             try {
                 const response = await fetch('processar.php?step=prepare', { method: 'POST', body: formData });

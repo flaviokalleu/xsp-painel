@@ -133,7 +133,12 @@ switch ($step) {
             echo json_encode(['success' => false, 'message' => $response->message]);
             exit;
         }
-        
+
+        // Salva M3U em cache para evitar novo download no step prepare
+        $cache_id = 'm3u_' . md5($source_path . time());
+        $cache_file = "{$temp_dir}/{$cache_id}.m3u";
+        file_put_contents($cache_file, $response->content);
+
         $lines = explode("\n", $response->content);
         $categories = ['live' => [], 'movie' => [], 'series' => []];
         $currentItem = null;
@@ -160,25 +165,39 @@ switch ($step) {
             sort($groups);
         }
 
-        echo json_encode(['success' => true, 'categories' => $categories]);
+        echo json_encode(['success' => true, 'categories' => $categories, 'cache_id' => $cache_id]);
         break;
 
     case 'prepare':
         $source_path = $_POST['m3u_url'] ?? '';
         $selected_categories = json_decode($_POST['selected_categories'] ?? '[]', true);
+        $cache_id_in = $_POST['cache_id'] ?? '';
 
         if (empty($source_path) || empty($selected_categories)) {
             echo json_encode(['success' => false, 'message' => 'URL ou categorias não fornecidas.']);
             exit;
         }
 
-        $response = fetchUrlContent($source_path);
-        if (!$response->success) {
-            echo json_encode(['success' => false, 'message' => $response->message]);
-            exit;
+        // Usa cache da M3U se disponível, evitando novo download
+        $cached_content = null;
+        if (!empty($cache_id_in)) {
+            $cache_file_in = "{$temp_dir}/{$cache_id_in}.m3u";
+            if (file_exists($cache_file_in)) {
+                $cached_content = file_get_contents($cache_file_in);
+                unlink($cache_file_in); // limpa após uso
+            }
         }
 
-        $lines = explode("\n", $response->content);
+        if ($cached_content === null) {
+            $response = fetchUrlContent($source_path);
+            if (!$response->success) {
+                echo json_encode(['success' => false, 'message' => $response->message]);
+                exit;
+            }
+            $cached_content = $response->content;
+        }
+
+        $lines = explode("\n", $cached_content);
         $playlist_data = [];
         $currentItem = null;
 

@@ -7,7 +7,8 @@ class TMDB {
         $params['api_key'] = self::$apiKey;
         $params['language'] = 'pt-BR';
         $url = 'https://api.themoviedb.org/3/' . $endpoint . '?' . http_build_query($params);
-        $json = @file_get_contents($url);
+        $ctx = stream_context_create(['http' => ['timeout' => 5, 'ignore_errors' => true]]);
+        $json = @file_get_contents($url, false, $ctx);
         return $json ? json_decode($json, true) : null;
     }
 
