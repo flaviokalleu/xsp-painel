@@ -1,7 +1,8 @@
 <?php
+ob_start();
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 error_reporting(E_ALL);
 ini_set('memory_limit', '2048M');
 set_time_limit(0);
@@ -117,6 +118,7 @@ function getOrCreateCategory($pdo, $categoryName, $categoryType) {
 // LÓGICA PRINCIPAL DO SCRIPT
 // =================================================================
 
+ob_clean();
 header('Content-Type: application/json; charset=utf-8');
 $step = $_GET['step'] ?? '';
 
@@ -285,10 +287,15 @@ switch ($step) {
                     
                     if ($tmdb_match) {
                         $tmdb_details = TMDB::getDetails($tmdb_type, $tmdb_match['id']);
-                        $dataToInsert['icon'] = $tmdb_details['stream_icon'] ?? $tmdb_details['cover'];
-                        $dataToInsert = array_merge($dataToInsert, $tmdb_details);
-                        if (!empty($tmdb_details['releaseDate'])) {
-                            $release_year = substr($tmdb_details['releaseDate'], 0, 4);
+                        if ($tmdb_details) {
+                            $dataToInsert['icon'] = $tmdb_details['stream_icon'] ?? ($tmdb_details['cover'] ?? $item['logo']);
+                            $dataToInsert = array_merge($dataToInsert, $tmdb_details);
+                            if (!empty($tmdb_details['releaseDate'])) {
+                                $release_year = substr($tmdb_details['releaseDate'], 0, 4);
+                            }
+                        } else {
+                            $log[] = ['message' => "TMDB sem detalhes: {$item['name']}", 'type' => 'warning'];
+                            $dataToInsert['icon'] = $item['logo'];
                         }
                     } else {
                         $log[] = ['message' => "TMDB não encontrou: {$item['name']}", 'type' => 'warning'];
