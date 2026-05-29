@@ -11,28 +11,55 @@ if (empty($_SESSION['logged_in_fxtream'])) {
 }
 
 // --- FUNÇÃO PARA LER CREDENCIAIS ---
+// As credenciais do painel vêm de variáveis de ambiente (com fallback), exatamente
+// como em api/controles/db.php (ex.: $endereco = getenv('DB_HOST') ?: 'localhost';).
+// Por isso lemos primeiro do ambiente e, se faltar algo, extraímos os valores
+// padrão definidos no próprio db.php. O regex antigo só funcionava com strings
+// literais ($endereco = 'valor';), por isso o backup falhava.
 function get_db_credentials_from_file($filepath) {
-    if (!file_exists($filepath) || !is_readable($filepath)) {
+    // 1) Fonte primária: variáveis de ambiente (mesma usada pelo db.php)
+    $host = getenv('DB_HOST');
+    $name = getenv('DB_NAME');
+    $user = getenv('DB_USER');
+    $pass = getenv('DB_PASS');
+
+    // 2) Fallback: extrai os valores padrão definidos dentro do db.php
+    if (($host === false || $name === false || $user === false || $pass === false)
+        && file_exists($filepath) && is_readable($filepath)) {
+        $content = file_get_contents($filepath);
+
+        $extract = function ($var) use ($content) {
+            // Aceita "$var = getenv('X') ?: 'default';"
+            if (preg_match('/\$' . $var . '\s*=\s*getenv\([^)]*\)\s*\?:\s*[\'"]([^\'"]*)[\'"]/', $content, $m)) {
+                return $m[1];
+            }
+            // Aceita atribuição direta de string: "$var = 'valor';"
+            if (preg_match('/\$' . $var . '\s*=\s*[\'"]([^\'"]*)[\'"]\s*;/', $content, $m)) {
+                return $m[1];
+            }
+            return null;
+        };
+
+        if ($host === false) { $host = $extract('endereco'); }
+        if ($name === false) { $name = $extract('banco'); }
+        if ($user === false) { $user = $extract('dbusuario'); }
+        if ($pass === false) { $pass = $extract('dbsenha'); }
+    }
+
+    // host, banco e usuário são obrigatórios; a senha pode ser vazia
+    if ($host === null || $host === false
+        || $name === null || $name === false
+        || $user === null || $user === false) {
         return null;
     }
-    $content = file_get_contents($filepath);
-    $credentials = [];
-    if (preg_match("/\\\$endereco\s*=\s*'([^']+)';/", $content, $matches)) {
-        $credentials['db_host'] = $matches[1];
-    }
-    if (preg_match("/\\\$banco\s*=\s*'([^']+)';/", $content, $matches)) {
-        $credentials['db_name'] = $matches[1];
-    }
-    if (preg_match("/\\\$dbusuario\s*=\s*'([^']+)';/", $content, $matches)) {
-        $credentials['db_user'] = $matches[1];
-    }
-    if (preg_match("/\\\$dbsenha\s*=\s*'([^']+)';/", $content, $matches)) {
-        $credentials['db_pass'] = $matches[1];
-    }
-    if (count($credentials) === 4) {
-        return $credentials;
-    }
-    return null;
+    if ($pass === null || $pass === false) { $pass = ''; }
+
+    return [
+        'db_host' => $host,
+        'db_name' => $name,
+        'db_user' => $user,
+        'db_pass' => $pass,
+    ];
 }
 
 // --- CONFIGURAÇÕES ---

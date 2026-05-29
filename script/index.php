@@ -67,7 +67,7 @@ if (file_exists($config_file)) {
             width: 100vw;
             height: 100vh;
             object-fit: cover;
-            opacity: 0.08;
+            opacity: 1;
             pointer-events: none;
             z-index: 0;
             user-select: none;
@@ -197,7 +197,7 @@ if (file_exists($config_file)) {
 
 
 
-    <img id="bg-logo" src="<?php echo htmlspecialchars($config['logo_path']); ?>" alt="">
+    <img id="bg-logo" src="./img/login_bg.jpg" alt="">
     <div id="particles-js"></div>
 
     <div class="login-container">
