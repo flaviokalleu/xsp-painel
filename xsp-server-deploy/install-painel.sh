@@ -47,7 +47,7 @@ die()  { echo "${RED}✗ ERRO:${NC} $*" >&2; exit 1; }
 clear
 cat <<'BANNER'
  ╔═══════════════════════════════════════════════════════════════╗
- ║   PAINEL OFFICE XTREAM — Instalador Automático v10            ║
+ ║   PAINEL OFFICE XTREAM — Instalador Automático v15            ║
  ║   Configura Docker, baixa o painel e ativa sua licença.       ║
  ╚═══════════════════════════════════════════════════════════════╝
 BANNER
